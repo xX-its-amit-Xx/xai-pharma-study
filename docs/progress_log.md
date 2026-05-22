@@ -2,6 +2,22 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — P7 submission-final robustness COMPLETE; Paper 1 SUBMISSION-READY
+- **R1 (ROAR cross-check):** primary per-molecule comprehensiveness vs expensive ROAR
+  Spearman **0.93** (n=18); ROAR independently confirms SHAP & LIME beat the null on all
+  6 tested endpoints. The naive global score-AOPC proxy does NOT track ROAR (-0.50),
+  validating our choice of comprehensiveness. Folded into manuscript §3.7 + §4.1.
+- **R4 (multi-seed H2):** scaffold-vs-random null holds across 3 seeds (median Δ -0.010,
+  p=0.19). The no-OOD-degradation result is not a fluke.
+- **R6 (mask-reference):** faithfulness ordering SHAP≈LIME >> random stable across
+  mean/median/permutation references.
+- Manuscript updated (§3.7 robustness, H1/H3/limitations); red_team_review items closed.
+- **Paper 1 is submission-ready** (draft). Remaining camera-ready niceties: inline
+  reference formatting, all-endpoint multi-seed. Files: paper/manuscript.md,
+  results/robustness_{roar,multiseed,maskref}.csv.
+- **Paper 2 gate satisfied and Paper 1 now submission-final** — awaiting user go-ahead
+  to open Paper 2 (novel reliability-certified-attribution framework across omics).
+
 ## 2026-05-22 — P6 manuscript draft + P7 (partial): COMPLETE/IN-PROGRESS
 - **P6:** `paper/manuscript.md` v0.1 — full structure, results tied to committed
   numbers, falsified hypotheses reported honestly. `paper/references.bib`.

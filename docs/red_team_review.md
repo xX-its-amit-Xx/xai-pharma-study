@@ -49,8 +49,11 @@ results may depend on the reference."
   two below-floor cells are excluded from reliability claims.
 
 ## Open items feeding the manuscript revision
-- [ ] Fold LIME-1000 robustness result into §4.1 and H3.
-- [ ] ROAR subset cross-check (R1).
-- [ ] Multi-seed split repeats for toxicity endpoints (R4).
-- [ ] Mask-reference sensitivity (R6).
-- [ ] Convert references.bib into the manuscript and finalize figure callouts.
+- [x] Fold LIME-1000 robustness result into §4.1 and H3 (done; H3 softened to budget-sensitive).
+- [x] ROAR subset cross-check (R1): primary comprehensiveness metric vs ROAR Spearman **0.93**;
+      ROAR confirms SHAP/LIME beat null on all 6 endpoints. Naive score-AOPC rejected (-0.50).
+      Folded into §3.7 + §4.1.
+- [x] Multi-seed split repeats for toxicity endpoints (R4): H2 null holds (p=0.19). §3.7.
+- [x] Mask-reference sensitivity (R6): ordering stable across mean/median/perm. §3.7.
+- [ ] Convert references.bib into the manuscript body and finalize figure callouts (camera-ready).
+- [ ] Extend multi-seed repeats to all 12 endpoints (camera-ready; toxicity done).
