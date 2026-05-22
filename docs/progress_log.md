@@ -2,6 +2,18 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — Paper 2 P9c: C3 cross-omics SUPPORTED across 3 modalities
+- **Molecules:** within-cell AUROC 0.69 (P9a-v2). **Transcriptomics** (leukemia microarray
+  72x7129): AUROC 0.864 (95% CI 0.76-0.94). **Sequence** (transformer on token sequences):
+  AUROC 0.807 (95% CI 0.76-0.85), C2 lift +0.213.
+- **Model-competence caveat (a finding):** a first sequence run with a near-chance
+  transformer (acc 0.57) gave an inconclusive certifier (AUROC 0.565, CI incl. 0.5). With a
+  competently trained model (acc 0.73) the certificate transferred cleanly. The certificate
+  is only meaningful when the model has actually learned the task — reported as a boundary
+  condition, not hidden.
+- All Paper 2 empirics complete (C1 feasible, C2 useful, C3 generalizes). Files:
+  results/p9c_{transcriptomics,sequence}*.csv. **Next: P10 manuscript.**
+
 ## 2026-05-22 — Paper 2 P9a-v2: C1 LIVES (supersedes the pivot)
 - Per user steer, gave per-instance certification a fair shot: 7 features + learned
   certifier + honest within-cell evaluation (cell-centered, per-cell held-out AUROC).

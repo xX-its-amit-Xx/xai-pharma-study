@@ -70,13 +70,15 @@ def per_instance_consensus(a, b):
 
 
 def main():
-    ds = load_dataset("sequence_imdb", n_samples=700, seq_len=40, vocab_size=400)
-    n_tr = 500
+    # Lower vocab + more markers per sequence so the signal is learnable (else the model
+    # is near-chance and the certifier test is compromised, not informative).
+    ds = load_dataset("sequence_imdb", n_samples=1200, seq_len=50, vocab_size=80)
+    n_tr = 900
     Xtr, ytr = ds.X[:n_tr], ds.y[:n_tr]
     Xte, yte = ds.X[n_tr:], ds.y[n_tr:]
     pad_id = 0  # CLS/aggregation token doubles as mask
     model = build_model("small_transformer", _bundle(ds, Xtr, ytr),
-                        {"d_model": 32, "n_heads": 2, "n_layers": 2, "epochs": 15})
+                        {"d_model": 48, "n_heads": 3, "n_layers": 2, "epochs": 45})
     acc = (model.predict(Xte) == yte).mean()
     print(f"sequence transformer test acc={acc:.3f}, test n={len(Xte)}")
 
