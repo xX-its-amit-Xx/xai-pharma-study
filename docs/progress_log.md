@@ -2,6 +2,29 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-21 ~23:10 EDT — P3 model zoo: COMPLETE
+- Built `src/featurize.py` (cached RDKit 2D descriptors + 2048-bit Morgan/ECFP4),
+  `src/data.py` (12-endpoint selection per §4: all 4 tox + ADME coverage; scaffold
+  AND random splits), `src/models_torch.py` (picklable/reloadable MLP adapter),
+  `src/train.py` (shared deterministic builders for P3+P4).
+- **Trained 144 models** = 12 endpoints x {descriptors, ECFP} x {scaffold, random} x
+  {RF, HGB, MLP}. **142/144 cleared the trivial-baseline floor** (2 ECFP cells below:
+  CYP2C9-Sub/scaffold/RF, HalfLife/scaffold/HGB → excluded from reliability claims).
+- **Scaffold is harder than random** (mean AUROC 0.802 vs 0.823; mean Spearman 0.425
+  vs 0.490): the deployment-shift signal needed for H2 is present and modest.
+- Best-per-endpoint: DILI 0.920, HIA 0.983, BBB 0.918, hERG 0.871, AMES 0.861 AUROC;
+  Caco2 0.738, VDss 0.555 Spearman. **Descriptor+tree models dominate** — the
+  interpretable representation is also the most accurate on most endpoints.
+- Tables: `results/performance.csv`, `results/performance_summary.md`. Log:
+  `results/train_log.txt`.
+- **Decisions logged:** D1 (PyTDC --no-deps), D2 (GNN → labelled extension). See
+  [`deviations.md`](deviations.md).
+- **Next chunk (P4):** attribution x metric x dataset matrix. For each floor-clearing
+  cell, compute SHAP/LIME/IG(+random) attributions on a fixed test-molecule sample,
+  then faithfulness (normalized to null), stability, agreement, and Adebayo sanity;
+  write a tidy per-cell results database to `results/reliability.csv` with bootstrap
+  CIs. Mind compute: subsample explained molecules (prereg allows), cache attributions.
+
 ## 2026-05-21 22:45 EDT — P2 feasibility gate: PASS
 - **Environment:** Python 3.14 only (no C compiler). `rdkit==2026.03.2` installs
   cleanly. **PyTDC's `numpy<2.0` pin cannot build on py3.14** → installed
