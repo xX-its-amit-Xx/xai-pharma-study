@@ -2,6 +2,20 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — Paper 2 P9a: C1 FALSIFIED at instance level -> framework PIVOT
+- Make-or-break premise test (1,440 instances over 12 endpoints x {RF, MLP}, descriptors).
+- **Simpson's paradox caught:** pooled stability->faithful AUROC 0.65 looked good, but
+  WITHIN-CELL AUROC is 0.53 (stability) / 0.55 (consensus) = chance. Consensus non-predictive
+  even pooled (0.47). Per-instance faithfulness is NOT estimable from cheap signals.
+- **Per the preregistered stopping rule, the per-instance certificate claim is WITHDRAWN.**
+  Paper 2 pivots to: (1) an honest negative result (cheap per-instance attribution trust
+  scores are infeasible — warns against false-confidence "confidence scores"); (2) a
+  constructive cell-level reliability *gating* protocol (null + sanity + aggregate stability)
+  that decides whether to trust a (model x method x endpoint) combination's explanations at
+  all, demonstrated across omics. See docs/paper2_design.md "P9a VERDICT" section.
+- Files: results/p9a_premise.csv, results/p9a_verdict.csv.
+- **Next:** P9b' implement + evaluate the cell-level gate (C2'); P9c' cross-omics (C3').
+
 ## 2026-05-22 — P7 submission-final robustness COMPLETE; Paper 1 SUBMISSION-READY
 - **R1 (ROAR cross-check):** primary per-molecule comprehensiveness vs expensive ROAR
   Spearman **0.93** (n=18); ROAR independently confirms SHAP & LIME beat the null on all

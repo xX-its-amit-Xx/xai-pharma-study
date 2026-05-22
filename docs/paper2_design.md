@@ -84,3 +84,33 @@ should believe that for *this* sample." This directly serves the OECD applicabil
 
 ## 8. Out of scope
 Wet-lab validation; new attribution *methods* (we wrap existing ones); LLM-scale models.
+
+---
+
+## P9a VERDICT (2026-05-22): C1 falsified at the per-instance level — framework pivots
+
+**Result.** Pooled, stability looked predictive (AUROC 0.65) but this is **Simpson's
+paradox**: within-cell (controlling for model+endpoint) AUROC is 0.53 (stability) and
+0.55 (consensus) — at chance. Consensus is non-predictive even pooled (AUROC 0.47;
+Spearman with faithfulness -0.06). Per-instance faithfulness is **not** estimable from
+cheap consensus/stability signals; combined with Paper 1's H2 (OOD doesn't predict
+either), no cheap per-instance trust proxy survives.
+
+**Decision (per §3 stopping rule): withdraw the per-instance certificate; pivot.**
+Paper 2 becomes an honest two-part contribution:
+1. **Negative result (novel and useful):** cheap per-instance reliability certification of
+   attributions is infeasible — cross-method consensus, local stability, and distribution
+   distance all fail to predict which individual explanations are faithful (within-cell
+   AUROC ~0.53). This warns the field against false-confidence per-prediction "trust scores."
+2. **Constructive alternative — reliability *gating* at the (model x method x endpoint)
+   level:** what *is* actionable is a cheap cell-level screen — beat-the-null faithfulness +
+   Adebayo sanity gate + aggregate stability — that decides whether to trust a model+method's
+   explanations *at all*. Demonstrate this gate transfers across omics (transcriptomics,
+   sequence). This is the deployable, honest framework.
+
+Revised hypotheses for the pivoted paper:
+- **C1' (falsified, reported):** per-instance certification infeasible (above).
+- **C2' (gating utility):** the cell-level gate (null+sanity+stability) separates
+  trustworthy from untrustworthy (model x method x endpoint) cells, and gating out failed
+  cells raises mean faithfulness of retained cells vs no gating.
+- **C3' (cross-omics):** the gate's verdicts are meaningful in >=2 further modalities.
