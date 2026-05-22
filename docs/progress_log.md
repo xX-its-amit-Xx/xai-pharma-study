@@ -2,6 +2,23 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — P4 descriptors chunk COMPLETE (ECFP running)
+- `src/experiment.py` ran the descriptors representation: 216 (cell x method) rows in
+  `results/reliability.csv` + pairwise `results/agreement.csv`. SHAP via fast
+  TreeExplainer; method matrix trees=SHAP/LIME/random, MLP=IG/LIME/random.
+- **Preliminary descriptors signal (NOT final — ECFP + P5 stats pending, do not
+  over-interpret):**
+  - beats-null rate (non-random methods): 0.86 → ~14% of method-cells don't beat the
+    random null on faithfulness.
+  - Adebayo sanity FAIL rate: 0.49 (mostly tree models via the label-permutation
+    analogue; must be split by model class in P5 — MLP uses true weight reinit).
+  - mean faithfulness: IG 0.65 > SHAP 0.40 > LIME 0.23 > random 0.13.
+  - faith_vs_null nearly equal scaffold (0.24) vs random (0.23); stability scaffold
+    0.39 vs random 0.43 → no large OOD degradation in descriptors so far (H2 to be
+    tested properly with ECFP + paired tests in P5).
+- ECFP chunk launched (background, resumable). Next: on completion, commit, then P5
+  (stats: H1-H5 tests, BH-FDR, figures).
+
 ## 2026-05-21 ~23:10 EDT — P3 model zoo: COMPLETE
 - Built `src/featurize.py` (cached RDKit 2D descriptors + 2048-bit Morgan/ECFP4),
   `src/data.py` (12-endpoint selection per §4: all 4 tox + ADME coverage; scaffold
