@@ -2,6 +2,23 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — P6 manuscript draft + P7 (partial): COMPLETE/IN-PROGRESS
+- **P6:** `paper/manuscript.md` v0.1 — full structure, results tied to committed
+  numbers, falsified hypotheses reported honestly. `paper/references.bib`.
+- **P7 done:** reproducibility package (`requirements.txt`, `REPRODUCE.md`),
+  adversarial self-review (`docs/red_team_review.md`), and the LIME-budget robustness
+  check (`src/robustness_lime.py`, `results/robustness_lime.csv`).
+- **Robustness correction (good science in action):** SHAP-LIME agreement roughly
+  doubles from mean rho 0.15 (300 LIME samples) to **0.34 (1,000 samples)** — never
+  exceeding 0.50. H3 corrected from "near-zero" to "modest, budget-sensitive";
+  abstract + §3.4 + §4.1 updated to the budget-corrected numbers as primary. The
+  qualitative disagreement finding stands; the magnitude was overstated at low budget.
+- **P7 backlog (refinements, not blockers; tracked in red_team_review.md):** ROAR
+  remove-and-retrain cross-check on a subset; multi-seed split repeats for toxicity
+  endpoints; mask-reference sensitivity.
+- **Milestone:** Paper 1 is DRAFT-COMPLETE (P6 reached) — the Paper 2 gate condition
+  is now satisfied, though Paper 1 is not yet submission-final (P7 backlog remains).
+
 ## 2026-05-22 — P4 COMPLETE + P5 hypothesis verdicts
 - Full matrix: 142 floor-clearing cells x methods = 426 rows in `results/reliability.csv`,
   pairwise `results/agreement.csv`. Analysis in `results/analysis/hypotheses_summary.md`,
