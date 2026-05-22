@@ -2,6 +2,25 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-21 22:45 EDT — P2 feasibility gate: PASS
+- **Environment:** Python 3.14 only (no C compiler). `rdkit==2026.03.2` installs
+  cleanly. **PyTDC's `numpy<2.0` pin cannot build on py3.14** → installed
+  `PyTDC --no-deps` + pure-python deps (fuzzywuzzy, python-Levenshtein, requests);
+  runtime works fine against numpy 2.4. Logged as deviation (data access, not data).
+- **End-to-end validated** on real DILI (drug-induced liver injury), scaffold split
+  (332/47/96): 217 RDKit 2D descriptors + RandomForest → **test AUROC 0.921**
+  (competitive with TDC leaderboard). All four harness metrics ran.
+- **Pilot signal (n=80 test mols):** SHAP faith +0.196 & LIME +0.180 both beat
+  random null (+0.071); SHAP **fails** Adebayo sanity (sim 0.668) while LIME passes
+  (0.136); SHAP-LIME Spearman 0.48, top-10 Jaccard 0.40.
+- **Design impact:** core design holds. GNN/`torch_geometric` remains a stretch
+  factor (feasibility checked early in P3); paper stands on descriptors + ECFP if
+  GNN is descoped. Code: [`src/feasibility.py`](../src/feasibility.py).
+- **Next chunk (P3):** build production featurization module (descriptors + Morgan
+  ECFP, cached), dataset-selection per §4 scaling rule (all 4 tox + ADME coverage,
+  ≥12 endpoints), model-zoo trainer (RF/HGB/MLP × representations × scaffold+random
+  splits), and run training; emit a performance table + trivial-baseline floor check.
+
 ## 2026-05-21 — P0/P1/P1b complete (planning foundation)
 - **P0 done:** literature review + novelty statement ([`00_literature_review.md`](00_literature_review.md)).
   Gap confirmed distinct from Sanchez-Lengeling 2020 (synthetic GNN ground truth),
