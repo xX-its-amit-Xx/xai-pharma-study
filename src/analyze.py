@@ -87,6 +87,13 @@ def main():
         med = agnr.spearman_mean.median()
         lines.append(f"- median pairwise Spearman (non-random pairs): **{med:.3f}** "
                      f"(prereg descriptive threshold <0.5 -> {'low agreement' if med<0.5 else 'not low'})")
+        lines.append("- by representation (median Spearman / median top-k Jaccard):")
+        for rep, g in agnr.groupby("representation"):
+            lines.append(f"    - {rep}: Spearman {g.spearman_mean.median():.3f}, "
+                         f"Jaccard {g.jaccard_mean.median():.3f}")
+        lines.append("- by method-pair (median Spearman, descriptors only):")
+        for (a, b), g in agnr[agnr.representation == "descriptors"].groupby(["method_a", "method_b"]):
+            lines.append(f"    - {a} vs {b}: {g.spearman_mean.median():.3f} (n={len(g)})")
         agnr = agnr.assign(is_tox=agnr.endpoint.isin(TOX))
         tox, non = agnr[agnr.is_tox].spearman_mean, agnr[~agnr.is_tox].spearman_mean
         if len(tox) > 3 and len(non) > 3:
@@ -101,7 +108,7 @@ def main():
     for mc, g in nm.groupby("model_class"):
         fail = (~g.sanity_passed).mean()
         lines.append(f"- {mc}: fail rate {fail:.2f} (n={len(g)}) "
-                     f"{'(>=0.15 → support)' if fail>=0.15 else ''}")
+                     f"{'(>=0.15 -> support)' if fail>=0.15 else ''}")
     lines.append("  NOTE: tree fail rate uses the label-permutation analogue (limitation D-prereg §9); "
                  "the MLP rate is the true Adebayo weight-reinitialization test.")
 
@@ -120,7 +127,7 @@ def main():
         lines.append(f"- {y}: eta^2 representation={e_rep:.3f}, method={e_meth:.3f}, "
                      f"model={e_model:.3f}, endpoint={e_ep:.3f}")
 
-    open(os.path.join(ANA, "hypotheses_summary.md"), "w").write("\n".join(lines))
+    open(os.path.join(ANA, "hypotheses_summary.md"), "w", encoding="utf-8").write("\n".join(lines))
     df.to_csv(os.path.join(ANA, "reliability_dedup.csv"), index=False)
     print("\n".join(lines))
     _figures(df, nm)

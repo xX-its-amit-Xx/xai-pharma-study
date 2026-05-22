@@ -2,6 +2,31 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — P4 COMPLETE + P5 hypothesis verdicts
+- Full matrix: 142 floor-clearing cells x methods = 426 rows in `results/reliability.csv`,
+  pairwise `results/agreement.csv`. Analysis in `results/analysis/hypotheses_summary.md`,
+  figures in `results/figures/`.
+- **Preregistered verdicts (headline science):**
+  - **H1 FALSIFIED (reassuring):** only **12%** of non-random method-cells fail to beat
+    the random null on faithfulness (threshold was >=20%). IG never fails (0.00),
+    LIME 0.15, SHAP 0.12. Attributions are faithful more often than we pessimistically
+    pre-registered.
+  - **H2 FALSIFIED (surprising):** no significant attribution-reliability degradation
+    under scaffold/OOD split — faithfulness Wilcoxon p=0.13, stability p=0.85. Model
+    *accuracy* dropped modestly OOD (P3) but attribution faithfulness/stability did not.
+  - **H3 SUPPORTED (strong):** explainers barely agree on feature rankings — median
+    pairwise Spearman 0.05 overall (descriptors 0.12, ECFP 0.03; SHAP-vs-LIME on
+    descriptors 0.09). Toxicity endpoints not more self-consistent (p=0.24).
+  - **H4 SUPPORTED:** sanity-check failures are real — **25%** of MLP cells fail the
+    *true* Adebayo weight-reinit test (tree label-perm analogue 39%, caveated).
+  - **H5 NUANCED (metric-dependent):** eta^2 shows endpoint dominates faithfulness
+    (0.54), representation dominates stability (0.36), method dominates sanity (0.83).
+    The simple "representation > method" hypothesis is too coarse.
+- **Caveat to verify in P7:** LIME used num_samples=300 (compute budget); low budget
+  may inflate LIME instability and depress agreement. Robustness re-run at 1000 planned.
+- **Next chunk (P6):** manuscript draft (title, abstract, intro, methods, results tied
+  to these numbers, discussion incl. the falsified hypotheses, limitations).
+
 ## 2026-05-22 — P4 descriptors chunk COMPLETE (ECFP running)
 - `src/experiment.py` ran the descriptors representation: 216 (cell x method) rows in
   `results/reliability.csv` + pairwise `results/agreement.csv`. SHAP via fast
