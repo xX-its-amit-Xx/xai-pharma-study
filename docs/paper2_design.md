@@ -114,3 +114,26 @@ Revised hypotheses for the pivoted paper:
   trustworthy from untrustworthy (model x method x endpoint) cells, and gating out failed
   cells raises mean faithfulness of retained cells vs no gating.
 - **C3' (cross-omics):** the gate's verdicts are meaningful in >=2 further modalities.
+
+---
+
+## P9a-v2 VERDICT (2026-05-22): C1 LIVES (supersedes the pivot above)
+
+A fair, well-powered retest (7 features, learned certifier, honest within-cell CV) gives
+**within-cell AUROC 0.694** (> 0.55). The earlier "falsified" call was an artifact of using
+only the two *weakest* signals. Per-instance certification IS feasible.
+
+**What predicts per-instance faithfulness (within-cell Spearman):** attribution magnitude
+(attr_l2 +0.38) and concentration (entropy -0.29), and model confidence/margin (+0.26) —
+NOT cross-method consensus (+0.15) and NOT distribution distance (kNN +0.03, consistent with
+Paper 1's H2). So the certificate is built primarily on attribution-intrinsic strength +
+model confidence.
+
+**Reinstated framework + revised hypotheses:**
+- **C1 (SUPPORTED):** per-instance faithfulness is predictable (within-cell AUROC 0.69),
+  modest but useful for triage.
+- **C2 (test next):** abstaining on low-certificate instances raises mean faithfulness of
+  retained explanations vs random abstention, *within cell* (faithfulness-coverage lift).
+- **C3 (test next):** the certifier transfers to >=2 further omics modalities.
+The certificate definition is updated: features = {attr_l2, attr_entropy, conf, margin,
+stability, consensus}; the OOD/kNN term is dropped as non-predictive.

@@ -2,6 +2,20 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — Paper 2 P9a-v2: C1 LIVES (supersedes the pivot)
+- Per user steer, gave per-instance certification a fair shot: 7 features + learned
+  certifier + honest within-cell evaluation (cell-centered, per-cell held-out AUROC).
+- **WITHIN-CELL AUROC = 0.694** (> 0.55 bar) over 22 testable cells. The 2-signal failure
+  was because consensus/stability are the WEAK predictors. Strong predictors (within-cell
+  Spearman vs faithfulness): **attr_l2 +0.38, attr_entropy -0.29, conf/margin +0.26**;
+  stability -0.18, consensus +0.15, kNN/OOD density +0.03 (~useless, consistent with H2).
+- **Per-instance certification is feasible** — but from the attribution's own magnitude/
+  concentration and the model's confidence, NOT from cross-method agreement or distribution
+  distance. Framework reinstated in this revised, evidence-based form.
+- Files: results/p9a_v2_features.csv, results/p9a_v2_verdict.csv.
+- **Next:** P9b build the certificate wrapper + abstention utility test (C2: within-cell
+  faithfulness-coverage, cert vs random); then P9c cross-omics.
+
 ## 2026-05-22 — Paper 2 P9a: C1 FALSIFIED at instance level -> framework PIVOT
 - Make-or-break premise test (1,440 instances over 12 endpoints x {RF, MLP}, descriptors).
 - **Simpson's paradox caught:** pooled stability->faithful AUROC 0.65 looked good, but
