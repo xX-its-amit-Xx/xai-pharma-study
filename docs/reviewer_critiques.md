@@ -7,8 +7,8 @@ Status: planned / running / DONE.
 | # | Critique | Sev | Response / action | Status |
 |---|---|---|---|---|
 | 1 | "The Disagreement Problem (Krishna et al. 2022) already showed SHAP/LIME disagree — H3 not novel." | H | Cite it; differentiate: ours is the *regulatory ADMET decision context*, the *full trust battery* (5 axes, not just disagreement), *null-referenced*, *under scaffold/OOD*; disagreement is one axis and not the headline. Add Related Work. | DONE |
-| 2 | "No GNNs — the dominant modern molecular model class is absent." | H | Add a GNN learned-representation extension (PyG available) on a few endpoints; report within-representation. (Round 2) | planned |
-| 3 | "Tree sanity test is label-permutation, not Adebayo weight-reinit; H4 leans on MLP only." | M | Already caveated; base H4 on MLP. Add discussion; note as scoped limitation. | DONE |
+| 2 | "No GNNs — the dominant modern molecular model class is absent." | H | **DONE.** GIN extension (§3.8): AUROC 0.79-0.86 on 4 endpoints; occlusion attributions beat null 3/4; all pass true weight-reinit sanity. | DONE |
+| 3 | "Tree sanity test is label-permutation, not Adebayo weight-reinit; H4 leans on MLP only." | M | **DONE/strengthened.** H4 based on MLP; GNN extension adds a *second* true-weight-reinit model class (all 4 pass). Tree caveat stated. | DONE |
 | 4 | "Single split realization for most endpoints." | M | Multi-seed confirmed for toxicity (§3.7); extend to all endpoints. (Round 2) | planned |
 | 5 | "Main agreement matrix used LIME@300; you showed that depresses agreement." | M | Re-run the main agreement at LIME@1000 (or report H3 primarily from the 1000-sample robustness numbers). (Round 2) | planned |
 | 6 | "Only comprehensiveness for faithfulness; add sufficiency / a second metric." | M | Add sufficiency; show ordering robust. (Round 2) | planned |

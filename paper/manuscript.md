@@ -62,6 +62,17 @@ A one-way variance decomposition (η²) shows no single factor dominates reliabi
 ### 3.7 Robustness checks
 Three preregistered robustness analyses support the main results. **(i) Faithfulness-metric validation:** our primary per-molecule comprehensiveness metric correlates with the expensive remove-and-retrain ROAR protocol at Spearman 0.93 (n=18 cell–method pairs over six endpoints), and ROAR independently confirms that SHAP and LIME beat the random null on *all* six endpoints. Notably, the naive alternative — a global mask-and-repredict model-score AOPC — does *not* track ROAR (ρ=−0.50), which is precisely why we adopted per-molecule comprehensiveness rather than score-AOPC as the primary metric. **(ii) Multi-seed OOD null (H2):** repeating the scaffold-vs-random contrast across three resample/training seeds on the toxicity endpoints leaves the null intact (median Δ=−0.010, sd 0.037, Wilcoxon p=0.19) — the absence of OOD degradation is not a single-sample fluke. **(iii) Mask-reference sensitivity:** the faithfulness ordering (SHAP≈LIME ≫ random) is unchanged across mean, median, and feature-permutation mask references (SHAP 0.33–0.37, LIME 0.30–0.32, random 0.07–0.09).
 
+### 3.8 Learned-representation extension: graph neural networks
+To cover the dominant modern molecular model class, we add a GIN trained on molecular graphs
+(PyG) for the safety-critical classification endpoints, with node-level **occlusion**
+attributions. The GINs are competitive (test AUROC 0.79–0.86). Their attributions beat the
+random null on faithfulness for 3/4 endpoints (the exception, BBB, is reported), and — notably
+— **all four pass the true weight-reinitialization Adebayo sanity check** (similarity 0.22–0.28
+≪ 0.5), in sharp contrast to TreeSHAP on tabular models. This both extends the audit to GNNs
+and provides a second, properly weight-randomized model class for the sanity test (addressing
+the tree label-permutation caveat): occlusion attributions on graph models are genuinely
+model-dependent.
+
 ## 4. Discussion
 The headline is a dissociation: **faithfulness and self-consistency are not the same thing, and a method can have the first without the second.** Across 12 real ADMET/tox endpoints, attributions are mostly faithful (H1) and robust to distribution shift (H2) — reassuring, and contrary to our preregistered pessimism — yet they disagree with one another almost completely (H3) and frequently fail to depend on the model they purport to explain (H4). Because faithfulness is the property the community most often reports, and the one that looks healthiest here, reporting it alone paints a misleadingly rosy picture.
 

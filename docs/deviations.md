@@ -35,4 +35,11 @@ with rationale. Good science requires these be visible.
   If P4 lands with budget to spare, the GNN extension (atom-level faithfulness/
   stability/sanity, within-representation) will be added and reported separately.
 
-## D3 — (reserved)
+## D3 — GNN extension implemented (reverses D2's descope, in revision)
+- D2 had descoped the GNN to a labelled extension. During the review-response iteration (R2),
+  reviewer critique #2 ("no GNNs") was judged sink-the-paper severity, so the extension was
+  implemented: a GIN on molecular graphs (PyG) for the 4 safety-critical classification
+  endpoints, with node-occlusion attributions and the true weight-reinitialization sanity test.
+  See `src/gnn_extension.py`, `results/gnn_extension.csv`, manuscript §3.8. The GNN is reported
+  as a within-representation extension (atom-level attributions remain non-commensurable with
+  the tabular feature vectors, per D2's rationale), not folded into the cross-method matrix.
