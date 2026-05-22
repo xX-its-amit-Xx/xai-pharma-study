@@ -1,0 +1,7 @@
+sequence transformer test acc=0.727, test n=300
+
+=== C3 sequence ===
+instances=300, faithful_rate=0.54
+within-modality certifier AUROC = 0.807  95% CI [0.757, 0.853]
+C2 lift @ 50% coverage = +0.213
+transfers

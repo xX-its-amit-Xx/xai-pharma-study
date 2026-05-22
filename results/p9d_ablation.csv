@@ -1,0 +1,2 @@
+"confidence-only [conf,margin]","attribution-only [attr_l2,attr_entropy]",no-attr-magnitude (drop attr_l2),full (7 features),full_minus_conf,attr_faith_raw,attr_faith_partial
+0.6797730492596904,0.5355679733629907,0.6994022345318475,0.6941899615559625,0.014416912296272066,0.45614235709336937,0.21544620612167317

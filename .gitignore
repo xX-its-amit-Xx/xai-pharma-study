@@ -1,7 +1,6 @@
+# Large/regenerable caches and downloads (NOT the results database)
 data/
-results/
 __pycache__/
 *.pyc
 .venv/
-*.log
 oof_cache/

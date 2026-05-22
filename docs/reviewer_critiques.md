@@ -9,10 +9,10 @@ Status: planned / running / DONE.
 | 1 | "The Disagreement Problem (Krishna et al. 2022) already showed SHAP/LIME disagree — H3 not novel." | H | Cite it; differentiate: ours is the *regulatory ADMET decision context*, the *full trust battery* (5 axes, not just disagreement), *null-referenced*, *under scaffold/OOD*; disagreement is one axis and not the headline. Add Related Work. | DONE |
 | 2 | "No GNNs — the dominant modern molecular model class is absent." | H | **DONE.** GIN extension (§3.8): AUROC 0.79-0.86 on 4 endpoints; occlusion attributions beat null 3/4; all pass true weight-reinit sanity. | DONE |
 | 3 | "Tree sanity test is label-permutation, not Adebayo weight-reinit; H4 leans on MLP only." | M | **DONE/strengthened.** H4 based on MLP; GNN extension adds a *second* true-weight-reinit model class (all 4 pass). Tree caveat stated. | DONE |
-| 4 | "Single split realization for most endpoints." | M | Multi-seed confirmed for toxicity (§3.7); extend to all endpoints. (Round 2) | planned |
-| 5 | "Main agreement matrix used LIME@300; you showed that depresses agreement." | M | Re-run the main agreement at LIME@1000 (or report H3 primarily from the 1000-sample robustness numbers). (Round 2) | planned |
-| 6 | "Only comprehensiveness for faithfulness; add sufficiency / a second metric." | M | Add sufficiency; show ordering robust. (Round 2) | planned |
-| 7 | "H2 surprising — maybe scaffold isn't a strong shift here. Quantify the shift." | M | Measure distribution-shift magnitude (train/test embedding distance) per endpoint; correlate with any reliability change. (Round 2) | planned |
+| 4 | "Single split realization for most endpoints." | M | Multi-seed confirmed for the 4 toxicity endpoints (§3.7). Extending to all 12 is straightforward but compute-heavy; **scoped to camera-ready**, flagged honestly. | partial |
+| 5 | "Main agreement matrix used LIME@300; you showed that depresses agreement." | M | **Addressed via the 6-endpoint LIME@1000 robustness**; H3 reports the budget-corrected numbers as primary (§3.4, §3.7). Full-matrix @1000 re-run scoped to camera-ready. | partial |
+| 6 | "Only comprehensiveness for faithfulness; add sufficiency / a second metric." | M | **DONE.** Sufficiency preserves the ordering SHAP>LIME>random (§3.7 (iv)). | DONE |
+| 7 | "H2 surprising — maybe scaffold isn't a strong shift here." | M | **DONE.** Shift is real (1.2x avg) but faithfulness change doesn't track it (Spearman -0.11) — H2 confirmed, not a weak-shift artifact (§3.7 (v)). | DONE |
 
 ## Paper 2 — the certificate
 | # | Critique | Sev | Response / action | Status |

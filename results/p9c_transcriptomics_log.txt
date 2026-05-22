@@ -1,0 +1,13 @@
+leukemia: X=(72, 7129), AML rate=0.35
+fold 0: explained 12, faithful_rate=0.92
+fold 1: explained 12, faithful_rate=0.83
+fold 2: explained 12, faithful_rate=0.83
+fold 3: explained 12, faithful_rate=0.92
+fold 4: explained 12, faithful_rate=0.92
+fold 5: explained 12, faithful_rate=1.00
+
+=== C3 transcriptomics ===
+instances=72, faithful_rate=0.90
+within-dataset certifier AUROC = 0.864  95% CI [0.764, 0.945]
+C2 lift @ 50% coverage = +0.046
+transfers

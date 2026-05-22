@@ -1,0 +1,213 @@
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/475 [00:00<?, ?it/s] 79%|#######8  | 375/475 [00:00<00:00, 3731.18it/s]100%|##########| 475/475 [00:00<00:00, 3461.57it/s]
+Downloading...
+  0%|          | 0.00/50.2k [00:00<?, ?iB/s]100%|##########| 50.2k/50.2k [00:00<00:00, 33.0MiB/s]
+Loading...
+Done!
+  0%|          | 0/655 [00:00<?, ?it/s] 41%|####1     | 269/655 [00:00<00:00, 2677.31it/s] 85%|########4 | 554/655 [00:00<00:00, 2772.29it/s]100%|##########| 655/655 [00:00<00:00, 2942.73it/s]
+Downloading...
+  0%|          | 0.00/344k [00:00<?, ?iB/s]100%|##########| 344k/344k [00:00<00:00, 118MiB/s]
+Loading...
+Done!
+  0%|          | 0/7278 [00:00<?, ?it/s]N#C/C(=C\C=C\c1ccccc1)c1ccc(F)cc1 returns RDKit error and is thus omitted...
+  7%|6         | 493/7278 [00:00<00:01, 4923.55it/s]N#C/C(=C\C=C\c1ccccc1)c1ccc(Cl)cc1 returns RDKit error and is thus omitted...
+ 14%|#3        | 997/7278 [00:00<00:01, 4978.38it/s] 21%|##        | 1521/7278 [00:00<00:01, 5094.56it/s] 28%|##7       | 2031/7278 [00:00<00:01, 5033.40it/s]N#C/C(=C\C=C\c1ccccc1[N+](=O)[O-])c1ccc(Br)cc1 returns RDKit error and is thus omitted...
+Cc1ccc(/C(C#N)=C/C=C/c2ccccc2[N+](=O)[O-])cc1 returns RDKit error and is thus omitted...
+ 35%|###4      | 2539/7278 [00:00<00:00, 5048.33it/s] 42%|####1     | 3044/7278 [00:00<00:00, 5006.23it/s] 49%|####8     | 3565/7278 [00:00<00:00, 5069.70it/s] 57%|#####6    | 4113/7278 [00:00<00:00, 5195.06it/s] 64%|######3   | 4633/7278 [00:00<00:00, 5135.82it/s] 71%|#######   | 5147/7278 [00:01<00:00, 5134.17it/s] 78%|#######7  | 5661/7278 [00:01<00:00, 4699.03it/s] 85%|########4 | 6161/7278 [00:01<00:00, 4780.48it/s] 92%|#########2| 6710/7278 [00:01<00:00, 4985.02it/s] 99%|#########9| 7214/7278 [00:01<00:00, 4850.12it/s]100%|##########| 7278/7278 [00:01<00:00, 4958.28it/s]
+Downloading...
+  0%|          | 0.00/707k [00:00<?, ?iB/s]100%|##########| 707k/707k [00:00<00:00, 134MiB/s]
+Loading...
+Done!
+  0%|          | 0/7385 [00:00<?, ?it/s] 11%|#         | 785/7385 [00:00<00:00, 7843.41it/s] 22%|##2       | 1638/7385 [00:00<00:00, 8244.16it/s] 33%|###3      | 2463/7385 [00:00<00:00, 7432.65it/s] 44%|####3     | 3215/7385 [00:00<00:00, 6997.50it/s] 53%|#####3    | 3922/7385 [00:00<00:00, 6542.93it/s] 62%|######2   | 4583/7385 [00:00<00:00, 5984.60it/s] 70%|#######   | 5190/7385 [00:00<00:00, 5650.63it/s] 78%|#######8  | 5761/7385 [00:00<00:00, 5274.49it/s] 85%|########5 | 6294/7385 [00:01<00:00, 5213.83it/s] 92%|#########2| 6819/7385 [00:01<00:00, 4852.97it/s] 99%|#########8| 7309/7385 [00:01<00:00, 4644.39it/s]100%|##########| 7385/7385 [00:01<00:00, 5636.74it/s]
+Downloading...
+  0%|          | 0.00/82.5k [00:00<?, ?iB/s]100%|##########| 82.5k/82.5k [00:00<00:00, 40.8MiB/s]
+Loading...
+Done!
+  0%|          | 0/910 [00:00<?, ?it/s] 35%|###4      | 314/910 [00:00<00:00, 3138.38it/s] 69%|######9   | 628/910 [00:00<00:00, 2800.30it/s]100%|##########| 910/910 [00:00<00:00, 2708.67it/s]
+Downloading...
+  0%|          | 0.00/40.1k [00:00<?, ?iB/s]100%|##########| 40.1k/40.1k [00:00<00:00, 14.1MiB/s]
+Loading...
+Done!
+  0%|          | 0/578 [00:00<?, ?it/s] 69%|######8   | 396/578 [00:00<00:00, 3954.38it/s]100%|##########| 578/578 [00:00<00:00, 3708.99it/s]
+Downloading...
+  0%|          | 0.00/138k [00:00<?, ?iB/s]100%|##########| 138k/138k [00:00<00:00, 88.4MiB/s]
+Loading...
+Done!
+  0%|          | 0/2030 [00:00<?, ?it/s] 18%|#7        | 359/2030 [00:00<00:00, 3588.87it/s] 35%|###5      | 719/2030 [00:00<00:00, 3586.11it/s] 53%|#####3    | 1078/2030 [00:00<00:00, 2792.75it/s] 70%|#######   | 1426/2030 [00:00<00:00, 3022.91it/s] 88%|########8 | 1794/2030 [00:00<00:00, 3235.15it/s]100%|##########| 2030/2030 [00:00<00:00, 3200.60it/s]
+Downloading...
+  0%|          | 0.00/89.9k [00:00<?, ?iB/s]100%|##########| 89.9k/89.9k [00:00<00:00, 51.3MiB/s]
+Loading...
+Done!
+  0%|          | 0/1130 [00:00<?, ?it/s] 23%|##3       | 264/1130 [00:00<00:00, 2634.55it/s] 47%|####6     | 528/1130 [00:00<00:00, 2599.68it/s] 70%|######9   | 789/1130 [00:00<00:00, 2588.88it/s] 93%|#########2| 1048/1130 [00:00<00:00, 2490.26it/s]100%|##########| 1130/1130 [00:00<00:00, 2517.88it/s]
+Downloading...
+  0%|          | 0.00/45.6k [00:00<?, ?iB/s]100%|##########| 45.6k/45.6k [00:00<00:00, 22.2MiB/s]
+Loading...
+Done!
+  0%|          | 0/669 [00:00<?, ?it/s] 45%|####5     | 303/669 [00:00<00:00, 3017.81it/s] 96%|#########5| 640/669 [00:00<00:00, 3219.94it/s]100%|##########| 669/669 [00:00<00:00, 3140.38it/s]
+Downloading...
+  0%|          | 0.00/46.0k [00:00<?, ?iB/s]100%|##########| 46.0k/46.0k [00:00<00:00, 56.9MiB/s]
+Loading...
+Done!
+  0%|          | 0/670 [00:00<?, ?it/s] 48%|####8     | 323/670 [00:00<00:00, 3221.13it/s] 96%|#########6| 646/670 [00:00<00:00, 3148.58it/s]100%|##########| 670/670 [00:00<00:00, 3110.56it/s]
+Downloading...
+  0%|          | 0.00/53.6k [00:00<?, ?iB/s]100%|##########| 53.6k/53.6k [00:00<00:00, 17.9MiB/s]
+Loading...
+Done!
+  0%|          | 0/667 [00:00<?, ?it/s] 41%|####1     | 275/667 [00:00<00:00, 2727.07it/s] 83%|########3 | 556/667 [00:00<00:00, 2770.32it/s]100%|##########| 667/667 [00:00<00:00, 2726.57it/s]
+Downloading...
+  0%|          | 0.00/91.6k [00:00<?, ?iB/s]100%|##########| 91.6k/91.6k [00:00<00:00, 55.2MiB/s]
+Loading...
+Done!
+  0%|          | 0/1213 [00:00<?, ?it/s] 24%|##4       | 292/1213 [00:00<00:00, 2914.83it/s] 48%|####8     | 584/1213 [00:00<00:00, 2645.63it/s] 71%|#######   | 858/1213 [00:00<00:00, 2684.64it/s] 94%|#########4| 1141/1213 [00:00<00:00, 2735.67it/s]100%|##########| 1213/1213 [00:00<00:00, 2725.58it/s]
+Loaded 12 endpoints
+DILI        descriptors scaffold rf  AUROC=0.920 OK
+DILI        descriptors scaffold hgb AUROC=0.899 OK
+DILI        descriptors scaffold mlp AUROC=0.820 OK
+DILI        descriptors random   rf  AUROC=0.909 OK
+DILI        descriptors random   hgb AUROC=0.885 OK
+DILI        descriptors random   mlp AUROC=0.821 OK
+DILI        ecfp        scaffold rf  AUROC=0.877 OK
+DILI        ecfp        scaffold hgb AUROC=0.812 OK
+DILI        ecfp        scaffold mlp AUROC=0.837 OK
+DILI        ecfp        random   rf  AUROC=0.839 OK
+DILI        ecfp        random   hgb AUROC=0.755 OK
+DILI        ecfp        random   mlp AUROC=0.813 OK
+hERG        descriptors scaffold rf  AUROC=0.851 OK
+hERG        descriptors scaffold hgb AUROC=0.830 OK
+hERG        descriptors scaffold mlp AUROC=0.871 OK
+hERG        descriptors random   rf  AUROC=0.848 OK
+hERG        descriptors random   hgb AUROC=0.827 OK
+hERG        descriptors random   mlp AUROC=0.850 OK
+hERG        ecfp        scaffold rf  AUROC=0.842 OK
+hERG        ecfp        scaffold hgb AUROC=0.783 OK
+hERG        ecfp        scaffold mlp AUROC=0.762 OK
+hERG        ecfp        random   rf  AUROC=0.859 OK
+hERG        ecfp        random   hgb AUROC=0.856 OK
+hERG        ecfp        random   mlp AUROC=0.803 OK
+AMES        descriptors scaffold rf  AUROC=0.860 OK
+AMES        descriptors scaffold hgb AUROC=0.861 OK
+AMES        descriptors scaffold mlp AUROC=0.837 OK
+AMES        descriptors random   rf  AUROC=0.908 OK
+AMES        descriptors random   hgb AUROC=0.914 OK
+AMES        descriptors random   mlp AUROC=0.894 OK
+AMES        ecfp        scaffold rf  AUROC=0.822 OK
+AMES        ecfp        scaffold hgb AUROC=0.839 OK
+AMES        ecfp        scaffold mlp AUROC=0.781 OK
+AMES        ecfp        random   rf  AUROC=0.862 OK
+AMES        ecfp        random   hgb AUROC=0.896 OK
+AMES        ecfp        random   mlp AUROC=0.851 OK
+LD50        descriptors scaffold rf  Spearman=0.528 OK
+LD50        descriptors scaffold hgb Spearman=0.529 OK
+LD50        descriptors scaffold mlp Spearman=0.462 OK
+LD50        descriptors random   rf  Spearman=0.737 OK
+LD50        descriptors random   hgb Spearman=0.766 OK
+LD50        descriptors random   mlp Spearman=0.647 OK
+LD50        ecfp        scaffold rf  Spearman=0.475 OK
+LD50        ecfp        scaffold hgb Spearman=0.484 OK
+LD50        ecfp        scaffold mlp Spearman=0.290 OK
+LD50        ecfp        random   rf  Spearman=0.628 OK
+LD50        ecfp        random   hgb Spearman=0.701 OK
+LD50        ecfp        random   mlp Spearman=0.628 OK
+Caco2       descriptors scaffold rf  Spearman=0.695 OK
+Caco2       descriptors scaffold hgb Spearman=0.738 OK
+Caco2       descriptors scaffold mlp Spearman=0.567 OK
+Caco2       descriptors random   rf  Spearman=0.842 OK
+Caco2       descriptors random   hgb Spearman=0.850 OK
+Caco2       descriptors random   mlp Spearman=0.641 OK
+Caco2       ecfp        scaffold rf  Spearman=0.578 OK
+Caco2       ecfp        scaffold hgb Spearman=0.604 OK
+Caco2       ecfp        scaffold mlp Spearman=0.355 OK
+Caco2       ecfp        random   rf  Spearman=0.755 OK
+Caco2       ecfp        random   hgb Spearman=0.754 OK
+Caco2       ecfp        random   mlp Spearman=0.527 OK
+HIA         descriptors scaffold rf  AUROC=0.983 OK
+HIA         descriptors scaffold hgb AUROC=0.982 OK
+HIA         descriptors scaffold mlp AUROC=0.969 OK
+HIA         descriptors random   rf  AUROC=0.998 OK
+HIA         descriptors random   hgb AUROC=0.999 OK
+HIA         descriptors random   mlp AUROC=0.997 OK
+HIA         ecfp        scaffold rf  AUROC=0.906 OK
+HIA         ecfp        scaffold hgb AUROC=0.930 OK
+HIA         ecfp        scaffold mlp AUROC=0.868 OK
+HIA         ecfp        random   rf  AUROC=1.000 OK
+HIA         ecfp        random   hgb AUROC=0.973 OK
+HIA         ecfp        random   mlp AUROC=0.959 OK
+BBB         descriptors scaffold rf  AUROC=0.918 OK
+BBB         descriptors scaffold hgb AUROC=0.908 OK
+BBB         descriptors scaffold mlp AUROC=0.846 OK
+BBB         descriptors random   rf  AUROC=0.896 OK
+BBB         descriptors random   hgb AUROC=0.901 OK
+BBB         descriptors random   mlp AUROC=0.890 OK
+BBB         ecfp        scaffold rf  AUROC=0.878 OK
+BBB         ecfp        scaffold hgb AUROC=0.863 OK
+BBB         ecfp        scaffold mlp AUROC=0.858 OK
+BBB         ecfp        random   rf  AUROC=0.886 OK
+BBB         ecfp        random   hgb AUROC=0.900 OK
+BBB         ecfp        random   mlp AUROC=0.880 OK
+VDss        descriptors scaffold rf  Spearman=0.555 OK
+VDss        descriptors scaffold hgb Spearman=0.418 OK
+VDss        descriptors scaffold mlp Spearman=0.385 OK
+VDss        descriptors random   rf  Spearman=0.585 OK
+VDss        descriptors random   hgb Spearman=0.356 OK
+VDss        descriptors random   mlp Spearman=0.472 OK
+VDss        ecfp        scaffold rf  Spearman=0.410 OK
+VDss        ecfp        scaffold hgb Spearman=0.439 OK
+VDss        ecfp        scaffold mlp Spearman=0.334 OK
+VDss        ecfp        random   rf  Spearman=0.473 OK
+VDss        ecfp        random   hgb Spearman=0.365 OK
+VDss        ecfp        random   mlp Spearman=0.262 OK
+CYP2C9-Sub  descriptors scaffold rf  AUROC=0.588 OK
+CYP2C9-Sub  descriptors scaffold hgb AUROC=0.605 OK
+CYP2C9-Sub  descriptors scaffold mlp AUROC=0.673 OK
+CYP2C9-Sub  descriptors random   rf  AUROC=0.664 OK
+CYP2C9-Sub  descriptors random   hgb AUROC=0.666 OK
+CYP2C9-Sub  descriptors random   mlp AUROC=0.638 OK
+CYP2C9-Sub  ecfp        scaffold rf  AUROC=0.485 BELOW-FLOOR
+CYP2C9-Sub  ecfp        scaffold hgb AUROC=0.686 OK
+CYP2C9-Sub  ecfp        scaffold mlp AUROC=0.691 OK
+CYP2C9-Sub  ecfp        random   rf  AUROC=0.647 OK
+CYP2C9-Sub  ecfp        random   hgb AUROC=0.678 OK
+CYP2C9-Sub  ecfp        random   mlp AUROC=0.657 OK
+CYP3A4-Sub  descriptors scaffold rf  AUROC=0.650 OK
+CYP3A4-Sub  descriptors scaffold hgb AUROC=0.657 OK
+CYP3A4-Sub  descriptors scaffold mlp AUROC=0.634 OK
+CYP3A4-Sub  descriptors random   rf  AUROC=0.691 OK
+CYP3A4-Sub  descriptors random   hgb AUROC=0.673 OK
+CYP3A4-Sub  descriptors random   mlp AUROC=0.647 OK
+CYP3A4-Sub  ecfp        scaffold rf  AUROC=0.686 OK
+CYP3A4-Sub  ecfp        scaffold hgb AUROC=0.663 OK
+CYP3A4-Sub  ecfp        scaffold mlp AUROC=0.673 OK
+CYP3A4-Sub  ecfp        random   rf  AUROC=0.643 OK
+CYP3A4-Sub  ecfp        random   hgb AUROC=0.630 OK
+CYP3A4-Sub  ecfp        random   mlp AUROC=0.651 OK
+HalfLife    descriptors scaffold rf  Spearman=0.425 OK
+HalfLife    descriptors scaffold hgb Spearman=0.241 OK
+HalfLife    descriptors scaffold mlp Spearman=0.513 OK
+HalfLife    descriptors random   rf  Spearman=0.373 OK
+HalfLife    descriptors random   hgb Spearman=0.256 OK
+HalfLife    descriptors random   mlp Spearman=0.384 OK
+HalfLife    ecfp        scaffold rf  Spearman=0.170 OK
+HalfLife    ecfp        scaffold hgb Spearman=0.085 BELOW-FLOOR
+HalfLife    ecfp        scaffold mlp Spearman=0.163 OK
+HalfLife    ecfp        random   rf  Spearman=0.276 OK
+HalfLife    ecfp        random   hgb Spearman=0.112 OK
+HalfLife    ecfp        random   mlp Spearman=0.140 OK
+CL-Hepa     descriptors scaffold rf  Spearman=0.408 OK
+CL-Hepa     descriptors scaffold hgb Spearman=0.386 OK
+CL-Hepa     descriptors scaffold mlp Spearman=0.416 OK
+CL-Hepa     descriptors random   rf  Spearman=0.420 OK
+CL-Hepa     descriptors random   hgb Spearman=0.388 OK
+CL-Hepa     descriptors random   mlp Spearman=0.413 OK
+CL-Hepa     ecfp        scaffold rf  Spearman=0.418 OK
+CL-Hepa     ecfp        scaffold hgb Spearman=0.373 OK
+CL-Hepa     ecfp        scaffold mlp Spearman=0.319 OK
+CL-Hepa     ecfp        random   rf  Spearman=0.347 OK
+CL-Hepa     ecfp        random   hgb Spearman=0.352 OK
+CL-Hepa     ecfp        random   mlp Spearman=0.259 OK
+
+Wrote D:\Users\ashenoy00000\.windsurf\xai-pharma-study\src\..\results\performance.csv  (144 rows)
+Cleared floor: 142/144
+  scaffold: mean AUROC=0.802, mean Spearman=0.425
+  random: mean AUROC=0.823, mean Spearman=0.490

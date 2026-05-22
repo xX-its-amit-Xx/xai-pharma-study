@@ -1,0 +1,262 @@
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/475 [00:00<?, ?it/s] 64%|######4   | 306/475 [00:00<00:00, 3054.31it/s]100%|##########| 475/475 [00:00<00:00, 2823.42it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/655 [00:00<?, ?it/s] 34%|###3      | 221/655 [00:00<00:00, 2207.05it/s] 73%|#######3  | 480/655 [00:00<00:00, 2429.03it/s]100%|##########| 655/655 [00:00<00:00, 2559.82it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/7278 [00:00<?, ?it/s]N#C/C(=C\C=C\c1ccccc1)c1ccc(F)cc1 returns RDKit error and is thus omitted...
+  5%|4         | 358/7278 [00:00<00:01, 3572.14it/s] 10%|#         | 744/7278 [00:00<00:01, 3739.56it/s]N#C/C(=C\C=C\c1ccccc1)c1ccc(Cl)cc1 returns RDKit error and is thus omitted...
+ 15%|#5        | 1118/7278 [00:00<00:01, 3704.63it/s] 21%|##1       | 1544/7278 [00:00<00:01, 3920.01it/s] 27%|##6       | 1948/7278 [00:00<00:01, 3962.75it/s]N#C/C(=C\C=C\c1ccccc1[N+](=O)[O-])c1ccc(Br)cc1 returns RDKit error and is thus omitted...
+ 32%|###2      | 2345/7278 [00:00<00:01, 3879.90it/s]Cc1ccc(/C(C#N)=C/C=C/c2ccccc2[N+](=O)[O-])cc1 returns RDKit error and is thus omitted...
+ 38%|###8      | 2770/7278 [00:00<00:01, 3997.63it/s] 44%|####4     | 3209/7278 [00:00<00:00, 4119.11it/s] 50%|####9     | 3622/7278 [00:00<00:00, 4050.36it/s] 56%|#####6    | 4083/7278 [00:01<00:00, 4219.70it/s] 62%|######1   | 4506/7278 [00:01<00:00, 4057.31it/s] 68%|######7   | 4915/7278 [00:01<00:00, 4059.04it/s] 74%|#######3  | 5368/7278 [00:01<00:00, 4194.92it/s] 80%|########  | 5844/7278 [00:01<00:00, 4360.12it/s] 86%|########6 | 6282/7278 [00:01<00:00, 4287.40it/s] 92%|#########2| 6712/7278 [00:01<00:00, 4280.67it/s] 98%|#########8| 7146/7278 [00:01<00:00, 4297.05it/s]100%|##########| 7278/7278 [00:01<00:00, 4062.31it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/7385 [00:00<?, ?it/s]  9%|8         | 630/7385 [00:00<00:01, 6287.94it/s] 18%|#7        | 1304/7385 [00:00<00:00, 6540.40it/s] 27%|##6       | 1988/7385 [00:00<00:00, 6676.54it/s] 36%|###5      | 2656/7385 [00:00<00:00, 5578.31it/s] 44%|####3     | 3236/7385 [00:00<00:00, 5355.63it/s] 51%|#####1    | 3786/7385 [00:00<00:00, 5212.06it/s] 58%|#####8    | 4316/7385 [00:00<00:00, 4984.90it/s] 65%|######5   | 4821/7385 [00:00<00:00, 4940.29it/s] 72%|#######2  | 5319/7385 [00:01<00:00, 4579.97it/s] 78%|#######8  | 5783/7385 [00:01<00:00, 4356.76it/s] 85%|########4 | 6265/7385 [00:01<00:00, 4482.20it/s] 91%|######### | 6718/7385 [00:01<00:00, 4462.50it/s] 97%|#########7| 7168/7385 [00:01<00:00, 4400.03it/s]100%|##########| 7385/7385 [00:01<00:00, 4912.92it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/910 [00:00<?, ?it/s] 30%|###       | 276/910 [00:00<00:00, 2753.38it/s] 61%|######    | 552/910 [00:00<00:00, 2584.39it/s] 89%|########9 | 812/910 [00:00<00:00, 2470.08it/s]100%|##########| 910/910 [00:00<00:00, 2455.08it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/578 [00:00<?, ?it/s] 63%|######2   | 363/578 [00:00<00:00, 3629.60it/s]100%|##########| 578/578 [00:00<00:00, 3414.00it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/2030 [00:00<?, ?it/s] 16%|#5        | 321/2030 [00:00<00:00, 3206.85it/s] 32%|###1      | 642/2030 [00:00<00:00, 3081.17it/s] 47%|####6     | 951/2030 [00:00<00:00, 2607.43it/s] 63%|######3   | 1281/2030 [00:00<00:00, 2848.66it/s] 79%|#######8  | 1600/2030 [00:00<00:00, 2960.11it/s] 94%|#########3| 1908/2030 [00:00<00:00, 2994.13it/s]100%|##########| 2030/2030 [00:00<00:00, 2969.37it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/1130 [00:00<?, ?it/s] 18%|#7        | 198/1130 [00:00<00:00, 1977.63it/s] 36%|###6      | 410/1130 [00:00<00:00, 2056.18it/s] 56%|#####5    | 632/1130 [00:00<00:00, 2128.07it/s] 78%|#######8  | 887/1130 [00:00<00:00, 2292.78it/s] 99%|#########8| 1117/1130 [00:00<00:00, 2153.61it/s]100%|##########| 1130/1130 [00:00<00:00, 2143.76it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/669 [00:00<?, ?it/s] 45%|####4     | 300/669 [00:00<00:00, 2999.29it/s] 90%|########9 | 602/669 [00:00<00:00, 3007.26it/s]100%|##########| 669/669 [00:00<00:00, 2978.78it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/670 [00:00<?, ?it/s] 45%|####5     | 302/670 [00:00<00:00, 3019.46it/s] 90%|######### | 604/670 [00:00<00:00, 2830.95it/s]100%|##########| 670/670 [00:00<00:00, 2775.56it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/667 [00:00<?, ?it/s] 36%|###6      | 241/667 [00:00<00:00, 2376.99it/s] 76%|#######6  | 507/667 [00:00<00:00, 2540.55it/s]100%|##########| 667/667 [00:00<00:00, 2399.83it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/1213 [00:00<?, ?it/s] 21%|##1       | 259/1213 [00:00<00:00, 2584.22it/s] 43%|####2     | 518/1213 [00:00<00:00, 2400.93it/s] 63%|######2   | 759/1213 [00:00<00:00, 1662.56it/s] 78%|#######7  | 945/1213 [00:00<00:00, 1666.86it/s] 96%|#########6| 1166/1213 [00:00<00:00, 1826.00it/s]100%|##########| 1213/1213 [00:00<00:00, 1876.33it/s]
+DILI        ecfp        scaffold rf  shap   faith=+0.114(null+0.010) stab=0.000 sanity=0.568FAIL
+DILI        ecfp        scaffold rf  lime   faith=+0.062(null+0.010) stab=0.003 sanity=0.020PASS
+DILI        ecfp        scaffold rf  random faith=+0.010(null+0.010) stab=1.439 sanity=1.000FAIL
+DILI        ecfp        scaffold hgb shap   faith=+0.343(null+0.015) stab=0.000 sanity=0.935FAIL
+DILI        ecfp        scaffold hgb lime   faith=+0.240(null+0.015) stab=0.004 sanity=0.020PASS
+DILI        ecfp        scaffold hgb random faith=+0.015(null+0.015) stab=1.431 sanity=1.000FAIL
+DILI        ecfp        scaffold mlp ig     faith=+0.499(null+0.027) stab=0.075 sanity=0.483PASS
+DILI        ecfp        scaffold mlp lime   faith=+0.139(null+0.027) stab=0.007 sanity=0.019PASS
+DILI        ecfp        scaffold mlp random faith=+0.027(null+0.027) stab=1.422 sanity=1.000FAIL
+DILI        ecfp        random   rf  shap   faith=+0.149(null+0.016) stab=0.000 sanity=0.559FAIL
+DILI        ecfp        random   rf  lime   faith=+0.104(null+0.016) stab=0.008 sanity=0.025PASS
+DILI        ecfp        random   rf  random faith=+0.016(null+0.016) stab=1.439 sanity=1.000FAIL
+DILI        ecfp        random   hgb shap   faith=+0.392(null+0.052) stab=0.000 sanity=0.932FAIL
+DILI        ecfp        random   hgb lime   faith=+0.244(null+0.052) stab=0.004 sanity=0.019PASS
+DILI        ecfp        random   hgb random faith=+0.052(null+0.052) stab=1.427 sanity=1.000FAIL
+DILI        ecfp        random   mlp ig     faith=+0.491(null+0.023) stab=0.098 sanity=0.484PASS
+DILI        ecfp        random   mlp lime   faith=+0.125(null+0.023) stab=0.011 sanity=0.020PASS
+DILI        ecfp        random   mlp random faith=+0.023(null+0.023) stab=1.443 sanity=1.000FAIL
+hERG        ecfp        scaffold rf  shap   faith=+0.114(null+0.006) stab=0.000 sanity=0.426PASS
+hERG        ecfp        scaffold rf  lime   faith=+0.053(null+0.006) stab=0.004 sanity=0.016PASS
+hERG        ecfp        scaffold rf  random faith=+0.006(null+0.006) stab=1.429 sanity=1.000FAIL
+hERG        ecfp        scaffold hgb shap   faith=+0.432(null+0.055) stab=0.000 sanity=0.905FAIL
+hERG        ecfp        scaffold hgb lime   faith=+0.171(null+0.055) stab=0.004 sanity=0.020PASS
+hERG        ecfp        scaffold hgb random faith=+0.055(null+0.055) stab=1.434 sanity=1.000FAIL
+hERG        ecfp        scaffold mlp ig     faith=+0.636(null+0.015) stab=0.080 sanity=0.480PASS
+hERG        ecfp        scaffold mlp lime   faith=+0.086(null+0.015) stab=0.005 sanity=0.023PASS
+hERG        ecfp        scaffold mlp random faith=+0.015(null+0.015) stab=1.435 sanity=1.000FAIL
+hERG        ecfp        random   rf  shap   faith=+0.132(null+0.015) stab=0.000 sanity=0.457PASS
+hERG        ecfp        random   rf  lime   faith=+0.085(null+0.015) stab=0.009 sanity=0.019PASS
+hERG        ecfp        random   rf  random faith=+0.015(null+0.015) stab=1.431 sanity=1.000FAIL
+hERG        ecfp        random   hgb shap   faith=+0.374(null+0.039) stab=0.000 sanity=0.906FAIL
+hERG        ecfp        random   hgb lime   faith=+0.116(null+0.039) stab=0.008 sanity=0.017PASS
+hERG        ecfp        random   hgb random faith=+0.039(null+0.039) stab=1.437 sanity=1.000FAIL
+hERG        ecfp        random   mlp ig     faith=+0.693(null+0.036) stab=0.075 sanity=0.492PASS
+hERG        ecfp        random   mlp lime   faith=+0.123(null+0.036) stab=0.004 sanity=0.017PASS
+hERG        ecfp        random   mlp random faith=+0.036(null+0.036) stab=1.436 sanity=1.000FAIL
+AMES        ecfp        scaffold rf  shap   faith=+0.139(null+0.018) stab=0.000 sanity=0.317PASS
+AMES        ecfp        scaffold rf  lime   faith=+0.092(null+0.018) stab=0.010 sanity=0.019PASS
+AMES        ecfp        scaffold rf  random faith=+0.018(null+0.018) stab=1.431 sanity=1.000FAIL
+AMES        ecfp        scaffold hgb shap   faith=+0.439(null+0.031) stab=0.000 sanity=0.605FAIL
+AMES        ecfp        scaffold hgb lime   faith=+0.113(null+0.031) stab=0.006 sanity=0.019PASS
+AMES        ecfp        scaffold hgb random faith=+0.031(null+0.031) stab=1.439 sanity=1.000FAIL
+AMES        ecfp        scaffold mlp ig     faith=+0.687(null+0.067) stab=0.097 sanity=0.289PASS
+AMES        ecfp        scaffold mlp lime   faith=+0.185(null+0.067) stab=0.009 sanity=0.016PASS
+AMES        ecfp        scaffold mlp random faith=+0.067(null+0.067) stab=1.432 sanity=1.000FAIL
+AMES        ecfp        random   rf  shap   faith=+0.158(null+0.021) stab=0.000 sanity=0.309PASS
+AMES        ecfp        random   rf  lime   faith=+0.128(null+0.021) stab=0.015 sanity=0.018PASS
+AMES        ecfp        random   rf  random faith=+0.021(null+0.021) stab=1.437 sanity=1.000FAIL
+AMES        ecfp        random   hgb shap   faith=+0.385(null+0.046) stab=0.000 sanity=0.538FAIL
+AMES        ecfp        random   hgb lime   faith=+0.190(null+0.046) stab=0.016 sanity=0.014PASS
+AMES        ecfp        random   hgb random faith=+0.046(null+0.046) stab=1.435 sanity=1.000FAIL
+AMES        ecfp        random   mlp ig     faith=+0.582(null+0.063) stab=0.254 sanity=0.273PASS
+AMES        ecfp        random   mlp lime   faith=+0.232(null+0.063) stab=0.171 sanity=0.016PASS
+AMES        ecfp        random   mlp random faith=+0.063(null+0.063) stab=1.446 sanity=1.000FAIL
+LD50        ecfp        scaffold rf  shap   faith=+0.764(null+0.188) stab=0.000 sanity=0.230PASS
+LD50        ecfp        scaffold rf  lime   faith=+0.496(null+0.188) stab=0.005 sanity=0.018PASS
+LD50        ecfp        scaffold rf  random faith=+0.188(null+0.188) stab=1.428 sanity=1.000FAIL
+LD50        ecfp        scaffold hgb shap   faith=+1.305(null+0.236) stab=0.000 sanity=0.609FAIL
+LD50        ecfp        scaffold hgb lime   faith=+0.625(null+0.236) stab=0.005 sanity=0.018PASS
+LD50        ecfp        scaffold hgb random faith=+0.236(null+0.236) stab=1.431 sanity=1.000FAIL
+LD50        ecfp        scaffold mlp ig     faith=+1.546(null+0.335) stab=0.125 sanity=0.247PASS
+LD50        ecfp        scaffold mlp lime   faith=+0.422(null+0.335) stab=0.004 sanity=0.022PASS
+LD50        ecfp        scaffold mlp random faith=+0.335(null+0.335) stab=1.450 sanity=1.000FAIL
+LD50        ecfp        random   rf  shap   faith=+0.754(null+0.210) stab=0.000 sanity=0.214PASS
+LD50        ecfp        random   rf  lime   faith=+0.641(null+0.210) stab=0.011 sanity=0.021PASS
+LD50        ecfp        random   rf  random faith=+0.210(null+0.210) stab=1.437 sanity=1.000FAIL
+LD50        ecfp        random   hgb shap   faith=+1.095(null+0.196) stab=0.000 sanity=0.516FAIL
+LD50        ecfp        random   hgb lime   faith=+0.833(null+0.196) stab=0.012 sanity=0.021PASS
+LD50        ecfp        random   hgb random faith=+0.196(null+0.196) stab=1.428 sanity=1.000FAIL
+LD50        ecfp        random   mlp ig     faith=+1.499(null+0.298) stab=0.115 sanity=0.247PASS
+LD50        ecfp        random   mlp lime   faith=+0.416(null+0.298) stab=0.011 sanity=0.023PASS
+LD50        ecfp        random   mlp random faith=+0.298(null+0.298) stab=1.449 sanity=1.000FAIL
+Caco2       ecfp        scaffold rf  shap   faith=+1.055(null+0.160) stab=0.000 sanity=0.499PASS
+Caco2       ecfp        scaffold rf  lime   faith=+0.631(null+0.160) stab=0.005 sanity=0.018PASS
+Caco2       ecfp        scaffold rf  random faith=+0.160(null+0.160) stab=1.433 sanity=1.000FAIL
+Caco2       ecfp        scaffold hgb shap   faith=+1.675(null+0.226) stab=0.000 sanity=0.890FAIL
+Caco2       ecfp        scaffold hgb lime   faith=+0.675(null+0.226) stab=0.006 sanity=0.020PASS
+Caco2       ecfp        scaffold hgb random faith=+0.226(null+0.226) stab=1.424 sanity=1.000FAIL
+Caco2       ecfp        scaffold mlp ig     faith=+1.007(null+0.311) stab=0.079 sanity=0.430PASS
+Caco2       ecfp        scaffold mlp lime   faith=+0.630(null+0.311) stab=0.013 sanity=0.018PASS
+Caco2       ecfp        scaffold mlp random faith=+0.311(null+0.311) stab=1.425 sanity=1.000FAIL
+Caco2       ecfp        random   rf  shap   faith=+0.922(null+0.086) stab=0.000 sanity=0.479PASS
+Caco2       ecfp        random   rf  lime   faith=+0.666(null+0.086) stab=0.008 sanity=0.020PASS
+Caco2       ecfp        random   rf  random faith=+0.086(null+0.086) stab=1.432 sanity=1.000FAIL
+Caco2       ecfp        random   hgb shap   faith=+1.554(null+0.242) stab=0.000 sanity=0.906FAIL
+Caco2       ecfp        random   hgb lime   faith=+0.634(null+0.242) stab=0.005 sanity=0.018PASS
+Caco2       ecfp        random   hgb random faith=+0.242(null+0.242) stab=1.435 sanity=1.000FAIL
+Caco2       ecfp        random   mlp ig     faith=+1.427(null+0.373) stab=0.079 sanity=0.396PASS
+Caco2       ecfp        random   mlp lime   faith=+1.052(null+0.373) stab=0.018 sanity=0.020PASS
+Caco2       ecfp        random   mlp random faith=+0.373(null+0.373) stab=1.436 sanity=1.000FAIL
+HIA         ecfp        scaffold rf  shap   faith=-0.064(null-0.008) stab=0.000 sanity=0.214PASS
+HIA         ecfp        scaffold rf  lime   faith=-0.045(null-0.008) stab=0.013 sanity=0.020PASS
+HIA         ecfp        scaffold rf  random faith=-0.008(null-0.008) stab=1.437 sanity=1.000FAIL
+HIA         ecfp        scaffold hgb shap   faith=+0.173(null+0.062) stab=0.000 sanity=0.879FAIL
+HIA         ecfp        scaffold hgb lime   faith=+0.112(null+0.062) stab=0.005 sanity=0.018PASS
+HIA         ecfp        scaffold hgb random faith=+0.062(null+0.062) stab=1.429 sanity=1.000FAIL
+HIA         ecfp        scaffold mlp ig     faith=+0.160(null+0.009) stab=0.089 sanity=0.422PASS
+HIA         ecfp        scaffold mlp lime   faith=+0.118(null+0.009) stab=0.006 sanity=0.020PASS
+HIA         ecfp        scaffold mlp random faith=+0.009(null+0.009) stab=1.436 sanity=1.000FAIL
+HIA         ecfp        random   rf  shap   faith=-0.015(null+0.000) stab=0.000 sanity=0.229PASS
+HIA         ecfp        random   rf  lime   faith=+0.008(null+0.000) stab=0.010 sanity=0.017PASS
+HIA         ecfp        random   rf  random faith=+0.000(null+0.000) stab=1.438 sanity=1.000FAIL
+HIA         ecfp        random   hgb shap   faith=+0.770(null+0.049) stab=0.000 sanity=0.896FAIL
+HIA         ecfp        random   hgb lime   faith=+0.126(null+0.049) stab=0.002 sanity=0.022PASS
+HIA         ecfp        random   hgb random faith=+0.049(null+0.049) stab=1.434 sanity=1.000FAIL
+HIA         ecfp        random   mlp ig     faith=+0.143(null+0.000) stab=0.086 sanity=0.422PASS
+HIA         ecfp        random   mlp lime   faith=+0.058(null+0.000) stab=0.004 sanity=0.019PASS
+HIA         ecfp        random   mlp random faith=+0.000(null+0.000) stab=1.426 sanity=1.000FAIL
+BBB         ecfp        scaffold rf  shap   faith=-0.007(null-0.000) stab=0.000 sanity=0.282PASS
+BBB         ecfp        scaffold rf  lime   faith=+0.025(null-0.000) stab=0.007 sanity=0.019PASS
+BBB         ecfp        scaffold rf  random faith=-0.000(null-0.000) stab=1.441 sanity=1.000FAIL
+BBB         ecfp        scaffold hgb shap   faith=+0.165(null+0.020) stab=0.000 sanity=0.824FAIL
+BBB         ecfp        scaffold hgb lime   faith=+0.048(null+0.020) stab=0.004 sanity=0.018PASS
+BBB         ecfp        scaffold hgb random faith=+0.020(null+0.020) stab=1.440 sanity=1.000FAIL
+BBB         ecfp        scaffold mlp ig     faith=+0.297(null+0.019) stab=0.083 sanity=0.341PASS
+BBB         ecfp        scaffold mlp lime   faith=+0.077(null+0.019) stab=0.004 sanity=0.015PASS
+BBB         ecfp        scaffold mlp random faith=+0.019(null+0.019) stab=1.434 sanity=1.000FAIL
+BBB         ecfp        random   rf  shap   faith=+0.042(null+0.006) stab=0.000 sanity=0.263PASS
+BBB         ecfp        random   rf  lime   faith=+0.066(null+0.006) stab=0.009 sanity=0.025PASS
+BBB         ecfp        random   rf  random faith=+0.006(null+0.006) stab=1.438 sanity=1.000FAIL
+BBB         ecfp        random   hgb shap   faith=+0.190(null+0.012) stab=0.000 sanity=0.801FAIL
+BBB         ecfp        random   hgb lime   faith=+0.098(null+0.012) stab=0.006 sanity=0.019PASS
+BBB         ecfp        random   hgb random faith=+0.012(null+0.012) stab=1.436 sanity=1.000FAIL
+BBB         ecfp        random   mlp ig     faith=+0.286(null+0.007) stab=0.073 sanity=0.330PASS
+BBB         ecfp        random   mlp lime   faith=+0.090(null+0.007) stab=0.005 sanity=0.022PASS
+BBB         ecfp        random   mlp random faith=+0.007(null+0.007) stab=1.434 sanity=1.000FAIL
+VDss        ecfp        scaffold rf  shap   faith=+0.549(null+0.141) stab=0.000 sanity=0.209PASS
+VDss        ecfp        scaffold rf  lime   faith=+0.471(null+0.141) stab=0.006 sanity=0.018PASS
+VDss        ecfp        scaffold rf  random faith=+0.141(null+0.141) stab=1.443 sanity=1.000FAIL
+VDss        ecfp        scaffold hgb shap   faith=+0.625(null+0.199) stab=0.000 sanity=0.775FAIL
+VDss        ecfp        scaffold hgb lime   faith=+0.366(null+0.199) stab=0.004 sanity=0.014PASS
+VDss        ecfp        scaffold hgb random faith=+0.199(null+0.199) stab=1.429 sanity=1.000FAIL
+VDss        ecfp        scaffold mlp ig     faith=+0.721(null+0.156) stab=0.209 sanity=0.290PASS
+VDss        ecfp        scaffold mlp lime   faith=+0.428(null+0.156) stab=0.006 sanity=0.020PASS
+VDss        ecfp        scaffold mlp random faith=+0.156(null+0.156) stab=1.436 sanity=1.000FAIL
+VDss        ecfp        random   rf  shap   faith=+0.409(null+0.077) stab=0.000 sanity=0.216PASS
+VDss        ecfp        random   rf  lime   faith=+0.396(null+0.077) stab=0.005 sanity=0.017PASS
+VDss        ecfp        random   rf  random faith=+0.077(null+0.077) stab=1.434 sanity=1.000FAIL
+VDss        ecfp        random   hgb shap   faith=+0.761(null+0.262) stab=0.000 sanity=0.766FAIL
+VDss        ecfp        random   hgb lime   faith=+0.552(null+0.262) stab=0.004 sanity=0.019PASS
+VDss        ecfp        random   hgb random faith=+0.262(null+0.262) stab=1.435 sanity=1.000FAIL
+VDss        ecfp        random   mlp ig     faith=+0.572(null+0.221) stab=0.143 sanity=0.288PASS
+VDss        ecfp        random   mlp lime   faith=+0.396(null+0.221) stab=0.008 sanity=0.020PASS
+VDss        ecfp        random   mlp random faith=+0.221(null+0.221) stab=1.442 sanity=1.000FAIL
+CYP2C9-Sub  ecfp        scaffold hgb shap   faith=+0.510(null+0.038) stab=0.000 sanity=0.911FAIL
+CYP2C9-Sub  ecfp        scaffold hgb lime   faith=+0.145(null+0.038) stab=0.003 sanity=0.017PASS
+CYP2C9-Sub  ecfp        scaffold hgb random faith=+0.038(null+0.038) stab=1.435 sanity=1.000FAIL
+CYP2C9-Sub  ecfp        scaffold mlp ig     faith=+0.383(null+0.025) stab=0.090 sanity=0.398PASS
+CYP2C9-Sub  ecfp        scaffold mlp lime   faith=+0.075(null+0.025) stab=0.005 sanity=0.022PASS
+CYP2C9-Sub  ecfp        scaffold mlp random faith=+0.025(null+0.025) stab=1.433 sanity=1.000FAIL
+CYP2C9-Sub  ecfp        random   rf  shap   faith=-0.049(null-0.004) stab=0.000 sanity=0.342PASS
+CYP2C9-Sub  ecfp        random   rf  lime   faith=-0.036(null-0.004) stab=0.015 sanity=0.029PASS
+CYP2C9-Sub  ecfp        random   rf  random faith=-0.004(null-0.004) stab=1.435 sanity=1.000FAIL
+CYP2C9-Sub  ecfp        random   hgb shap   faith=+0.463(null+0.053) stab=0.000 sanity=0.906FAIL
+CYP2C9-Sub  ecfp        random   hgb lime   faith=+0.073(null+0.053) stab=0.005 sanity=0.017PASS
+CYP2C9-Sub  ecfp        random   hgb random faith=+0.053(null+0.053) stab=1.443 sanity=1.000FAIL
+CYP2C9-Sub  ecfp        random   mlp ig     faith=+0.400(null+0.026) stab=0.096 sanity=0.407PASS
+CYP2C9-Sub  ecfp        random   mlp lime   faith=+0.140(null+0.026) stab=0.006 sanity=0.018PASS
+CYP2C9-Sub  ecfp        random   mlp random faith=+0.026(null+0.026) stab=1.440 sanity=1.000FAIL
+CYP3A4-Sub  ecfp        scaffold rf  shap   faith=+0.101(null+0.009) stab=0.000 sanity=0.546FAIL
+CYP3A4-Sub  ecfp        scaffold rf  lime   faith=+0.043(null+0.009) stab=0.006 sanity=0.019PASS
+CYP3A4-Sub  ecfp        scaffold rf  random faith=+0.009(null+0.009) stab=1.422 sanity=1.000FAIL
+CYP3A4-Sub  ecfp        scaffold hgb shap   faith=+0.472(null+0.079) stab=0.000 sanity=0.926FAIL
+CYP3A4-Sub  ecfp        scaffold hgb lime   faith=+0.182(null+0.079) stab=0.004 sanity=0.016PASS
+CYP3A4-Sub  ecfp        scaffold hgb random faith=+0.079(null+0.079) stab=1.431 sanity=1.000FAIL
+CYP3A4-Sub  ecfp        scaffold mlp ig     faith=+0.602(null+0.032) stab=0.068 sanity=0.411PASS
+CYP3A4-Sub  ecfp        scaffold mlp lime   faith=+0.144(null+0.032) stab=0.004 sanity=0.020PASS
+CYP3A4-Sub  ecfp        scaffold mlp random faith=+0.032(null+0.032) stab=1.421 sanity=1.000FAIL
+CYP3A4-Sub  ecfp        random   rf  shap   faith=+0.117(null+0.011) stab=0.000 sanity=0.533FAIL
+CYP3A4-Sub  ecfp        random   rf  lime   faith=+0.066(null+0.011) stab=0.006 sanity=0.019PASS
+CYP3A4-Sub  ecfp        random   rf  random faith=+0.011(null+0.011) stab=1.434 sanity=1.000FAIL
+CYP3A4-Sub  ecfp        random   hgb shap   faith=+0.474(null+0.032) stab=0.000 sanity=0.921FAIL
+CYP3A4-Sub  ecfp        random   hgb lime   faith=+0.235(null+0.032) stab=0.004 sanity=0.019PASS
+CYP3A4-Sub  ecfp        random   hgb random faith=+0.032(null+0.032) stab=1.440 sanity=1.000FAIL
+CYP3A4-Sub  ecfp        random   mlp ig     faith=+0.601(null+0.052) stab=0.081 sanity=0.412PASS
+CYP3A4-Sub  ecfp        random   mlp lime   faith=+0.161(null+0.052) stab=0.007 sanity=0.017PASS
+CYP3A4-Sub  ecfp        random   mlp random faith=+0.052(null+0.052) stab=1.441 sanity=1.000FAIL
+HalfLife    ecfp        scaffold rf  shap   faith=+0.490(null+0.027) stab=0.000 sanity=0.249PASS
+HalfLife    ecfp        scaffold rf  lime   faith=+0.460(null+0.027) stab=0.017 sanity=0.021PASS
+HalfLife    ecfp        scaffold rf  random faith=+0.027(null+0.027) stab=1.433 sanity=1.000FAIL
+HalfLife    ecfp        scaffold mlp ig     faith=+1.745(null+0.230) stab=0.159 sanity=0.395PASS
+HalfLife    ecfp        scaffold mlp lime   faith=+0.373(null+0.230) stab=0.006 sanity=0.019PASS
+HalfLife    ecfp        scaffold mlp random faith=+0.230(null+0.230) stab=1.436 sanity=1.000FAIL
+HalfLife    ecfp        random   rf  shap   faith=+0.456(null+0.022) stab=0.000 sanity=0.235PASS
+HalfLife    ecfp        random   rf  lime   faith=+0.426(null+0.022) stab=0.017 sanity=0.029PASS
+HalfLife    ecfp        random   rf  random faith=+0.022(null+0.022) stab=1.434 sanity=1.000FAIL
+HalfLife    ecfp        random   hgb shap   faith=+0.602(null+0.233) stab=0.000 sanity=0.825FAIL
+HalfLife    ecfp        random   hgb lime   faith=+0.428(null+0.233) stab=0.005 sanity=0.017PASS
+HalfLife    ecfp        random   hgb random faith=+0.233(null+0.233) stab=1.430 sanity=1.000FAIL
+HalfLife    ecfp        random   mlp ig     faith=+1.728(null+0.282) stab=0.102 sanity=0.380PASS
+HalfLife    ecfp        random   mlp lime   faith=+0.396(null+0.282) stab=0.010 sanity=0.019PASS
+HalfLife    ecfp        random   mlp random faith=+0.282(null+0.282) stab=1.442 sanity=1.000FAIL
+CL-Hepa     ecfp        scaffold rf  shap   faith=+0.728(null+0.132) stab=0.000 sanity=0.334PASS
+CL-Hepa     ecfp        scaffold rf  lime   faith=+0.537(null+0.132) stab=0.011 sanity=0.018PASS
+CL-Hepa     ecfp        scaffold rf  random faith=+0.132(null+0.132) stab=1.425 sanity=1.000FAIL
+CL-Hepa     ecfp        scaffold hgb shap   faith=+0.842(null+0.299) stab=0.000 sanity=0.890FAIL
+CL-Hepa     ecfp        scaffold hgb lime   faith=+0.566(null+0.299) stab=0.005 sanity=0.022PASS
+CL-Hepa     ecfp        scaffold hgb random faith=+0.299(null+0.299) stab=1.438 sanity=1.000FAIL
+CL-Hepa     ecfp        scaffold mlp ig     faith=+0.876(null+0.185) stab=0.115 sanity=0.388PASS
+CL-Hepa     ecfp        scaffold mlp lime   faith=+0.357(null+0.185) stab=0.008 sanity=0.021PASS
+CL-Hepa     ecfp        scaffold mlp random faith=+0.185(null+0.185) stab=1.425 sanity=1.000FAIL
+CL-Hepa     ecfp        random   rf  shap   faith=+0.672(null+0.130) stab=0.000 sanity=0.344PASS
+CL-Hepa     ecfp        random   rf  lime   faith=+0.624(null+0.130) stab=0.009 sanity=0.022PASS
+CL-Hepa     ecfp        random   rf  random faith=+0.130(null+0.130) stab=1.433 sanity=1.000FAIL
+CL-Hepa     ecfp        random   hgb shap   faith=+1.068(null+0.221) stab=0.000 sanity=0.895FAIL
+CL-Hepa     ecfp        random   hgb lime   faith=+0.656(null+0.221) stab=0.006 sanity=0.018PASS
+CL-Hepa     ecfp        random   hgb random faith=+0.221(null+0.221) stab=1.439 sanity=1.000FAIL
+CL-Hepa     ecfp        random   mlp ig     faith=+0.901(null+0.180) stab=0.105 sanity=0.378PASS
+CL-Hepa     ecfp        random   mlp lime   faith=+0.372(null+0.180) stab=0.008 sanity=0.017PASS
+CL-Hepa     ecfp        random   mlp random faith=+0.180(null+0.180) stab=1.436 sanity=1.000FAIL

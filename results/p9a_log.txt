@@ -1,0 +1,86 @@
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/475 [00:00<?, ?it/s] 83%|########2 | 394/475 [00:00<00:00, 3920.00it/s]100%|##########| 475/475 [00:00<00:00, 3712.14it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/655 [00:00<?, ?it/s] 43%|####2     | 280/655 [00:00<00:00, 2796.66it/s] 91%|#########1| 598/655 [00:00<00:00, 3018.32it/s]100%|##########| 655/655 [00:00<00:00, 3039.77it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/7278 [00:00<?, ?it/s]N#C/C(=C\C=C\c1ccccc1)c1ccc(F)cc1 returns RDKit error and is thus omitted...
+  7%|6         | 508/7278 [00:00<00:01, 5069.62it/s]N#C/C(=C\C=C\c1ccccc1)c1ccc(Cl)cc1 returns RDKit error and is thus omitted...
+ 14%|#3        | 1015/7278 [00:00<00:01, 5026.93it/s] 21%|##1       | 1537/7278 [00:00<00:01, 5109.33it/s] 28%|##8       | 2048/7278 [00:00<00:01, 5095.76it/s]N#C/C(=C\C=C\c1ccccc1[N+](=O)[O-])c1ccc(Br)cc1 returns RDKit error and is thus omitted...
+Cc1ccc(/C(C#N)=C/C=C/c2ccccc2[N+](=O)[O-])cc1 returns RDKit error and is thus omitted...
+ 35%|###5      | 2558/7278 [00:00<00:00, 5049.92it/s] 43%|####2     | 3111/7278 [00:00<00:00, 5210.99it/s] 50%|####9     | 3633/7278 [00:00<00:00, 5101.62it/s] 57%|#####7    | 4167/7278 [00:00<00:00, 5174.03it/s] 64%|######4   | 4685/7278 [00:00<00:00, 5138.39it/s] 71%|#######1  | 5203/7278 [00:01<00:00, 5150.92it/s] 79%|#######8  | 5719/7278 [00:01<00:00, 4864.12it/s] 85%|########5 | 6209/7278 [00:01<00:00, 4360.31it/s] 91%|#########1| 6656/7278 [00:01<00:00, 4072.59it/s] 98%|#########7| 7111/7278 [00:01<00:00, 4195.55it/s]100%|##########| 7278/7278 [00:01<00:00, 4702.81it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/7385 [00:00<?, ?it/s] 10%|9         | 736/7385 [00:00<00:00, 7356.01it/s] 20%|#9        | 1472/7385 [00:00<00:00, 7071.79it/s] 30%|###       | 2220/7385 [00:00<00:00, 7253.39it/s] 40%|###9      | 2947/7385 [00:00<00:00, 6737.42it/s] 49%|####9     | 3626/7385 [00:00<00:01, 3363.21it/s] 56%|#####5    | 4122/7385 [00:00<00:00, 3384.66it/s] 63%|######3   | 4668/7385 [00:01<00:00, 3807.28it/s] 70%|######9   | 5154/7385 [00:01<00:00, 4043.87it/s] 76%|#######6  | 5634/7385 [00:01<00:00, 4226.90it/s] 83%|########3 | 6140/7385 [00:01<00:00, 4440.65it/s] 90%|########9 | 6638/7385 [00:01<00:00, 4583.45it/s] 97%|#########6| 7129/7385 [00:01<00:00, 4455.71it/s]100%|##########| 7385/7385 [00:01<00:00, 4510.66it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/910 [00:00<?, ?it/s] 30%|##9       | 270/910 [00:00<00:00, 2698.06it/s] 59%|#####9    | 540/910 [00:00<00:00, 2631.53it/s] 88%|########8 | 804/910 [00:00<00:00, 2445.74it/s]100%|##########| 910/910 [00:00<00:00, 2368.52it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/578 [00:00<?, ?it/s] 60%|######    | 348/578 [00:00<00:00, 3479.46it/s]100%|##########| 578/578 [00:00<00:00, 3421.10it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/2030 [00:00<?, ?it/s] 16%|#6        | 325/2030 [00:00<00:00, 3230.88it/s] 32%|###1      | 649/2030 [00:00<00:00, 2904.65it/s] 46%|####6     | 942/2030 [00:00<00:00, 2609.12it/s] 63%|######2   | 1269/2030 [00:00<00:00, 2839.65it/s] 78%|#######8  | 1585/2030 [00:00<00:00, 2946.64it/s] 95%|#########4| 1926/2030 [00:00<00:00, 3093.66it/s]100%|##########| 2030/2030 [00:00<00:00, 2948.42it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/1130 [00:00<?, ?it/s] 20%|##        | 231/1130 [00:00<00:00, 2308.18it/s] 41%|####      | 462/1130 [00:00<00:00, 2301.74it/s] 65%|######4   | 731/1130 [00:00<00:00, 2476.96it/s] 87%|########7 | 984/1130 [00:00<00:00, 2476.77it/s]100%|##########| 1130/1130 [00:00<00:00, 2326.89it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/669 [00:00<?, ?it/s] 46%|####6     | 308/669 [00:00<00:00, 3070.93it/s] 92%|#########2| 618/669 [00:00<00:00, 3084.74it/s]100%|##########| 669/669 [00:00<00:00, 3057.85it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/670 [00:00<?, ?it/s] 47%|####7     | 318/670 [00:00<00:00, 3167.62it/s] 95%|#########4| 635/670 [00:00<00:00, 3054.43it/s]100%|##########| 670/670 [00:00<00:00, 3023.43it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/667 [00:00<?, ?it/s] 35%|###5      | 235/667 [00:00<00:00, 2347.27it/s] 70%|#######   | 470/667 [00:00<00:00, 2307.41it/s]100%|##########| 667/667 [00:00<00:00, 2382.76it/s]
+Found local copy...
+Loading...
+Done!
+  0%|          | 0/1213 [00:00<?, ?it/s] 22%|##1       | 264/1213 [00:00<00:00, 2636.01it/s] 44%|####3     | 528/1213 [00:00<00:00, 2073.57it/s] 61%|######1   | 743/1213 [00:00<00:00, 2075.09it/s] 82%|########2 | 1000/1213 [00:00<00:00, 2249.97it/s]100%|##########| 1213/1213 [00:00<00:00, 2235.31it/s]
+DILI        rf  faithful_rate=0.93 mean_consensus=+0.389
+DILI        mlp faithful_rate=0.82 mean_consensus=+0.369
+hERG        rf  faithful_rate=0.50 mean_consensus=+0.309
+hERG        mlp faithful_rate=0.90 mean_consensus=+0.232
+AMES        rf  faithful_rate=0.92 mean_consensus=+0.239
+AMES        mlp faithful_rate=0.90 mean_consensus=+0.132
+LD50        rf  faithful_rate=0.90 mean_consensus=+0.114
+LD50        mlp faithful_rate=0.97 mean_consensus=+0.204
+Caco2       rf  faithful_rate=0.93 mean_consensus=+0.117
+Caco2       mlp faithful_rate=1.00 mean_consensus=+0.210
+HIA         rf  faithful_rate=0.30 mean_consensus=+0.196
+HIA         mlp faithful_rate=0.95 mean_consensus=+0.190
+BBB         rf  faithful_rate=0.75 mean_consensus=+0.279
+BBB         mlp faithful_rate=0.85 mean_consensus=+0.208
+VDss        rf  faithful_rate=0.93 mean_consensus=+0.031
+VDss        mlp faithful_rate=0.72 mean_consensus=+0.275
+CYP2C9-Sub  rf  faithful_rate=0.35 mean_consensus=+0.245
+CYP2C9-Sub  mlp faithful_rate=0.83 mean_consensus=+0.200
+CYP3A4-Sub  rf  faithful_rate=0.73 mean_consensus=+0.219
+CYP3A4-Sub  mlp faithful_rate=0.82 mean_consensus=+0.228
+HalfLife    rf  faithful_rate=0.92 mean_consensus=+0.093
+HalfLife    mlp faithful_rate=0.88 mean_consensus=+0.407
+CL-Hepa     rf  faithful_rate=1.00 mean_consensus=+0.168
+CL-Hepa     mlp faithful_rate=0.93 mean_consensus=+0.379
+
+=== C1: do consensus / stability predict per-instance faithfulness? ===
+n instances = 1440, faithful rate = 0.82
+AUROC consensus->faithful   = 0.468
+AUROC stability->faithful   = 0.651
+AUROC combined (logistic)   = 0.642
+Spearman(consensus, faith)  = -0.058
+Spearman(stability, faith)  = -0.219
+
+Preregistered verdict (AUROC>0.55): C1 SUPPORTED (certificate feasible)
