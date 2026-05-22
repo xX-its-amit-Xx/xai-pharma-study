@@ -2,6 +2,24 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — Review-response iteration (R1-R3) COMPLETE
+- **R1:** positioned both papers vs the Disagreement Problem (Krishna 2022) + selective
+  prediction; ran the Paper-2 ablation that **confirmed critique A** — the certificate is
+  largely model confidence (full beats confidence-only by only +0.014); reframed Paper 2
+  honestly around this; added figures + bib.
+- **R2 (Paper 1):** **GNN extension** (GIN, 4 endpoints, AUROC 0.79-0.86; occlusion
+  attributions beat null 3/4; all pass true weight-reinit sanity) — addresses critiques #2/#3.
+  **Sufficiency** metric preserves SHAP>LIME>random (#6). **Shift-magnitude**: scaffold shift
+  real (1.2x) but faithfulness change doesn't track it (rho -0.11), confirming H2 (#7).
+- **Reproducibility fix:** results/ + figures were gitignored; now tracked (75 files in repo).
+- **Honestly scoped to camera-ready:** multi-seed across all 12 endpoints (#4; toxicity done),
+  full-matrix LIME@1000 (#5; 6-endpoint subset done).
+- **R3:** figure manifests + reviewer-response notes added to both manuscripts; critique
+  register (docs/reviewer_critiques.md) is the audit trail.
+- **Net:** both manuscripts strengthened and made more honest; the single most important
+  change is that Paper 2's central claim is now correctly stated as "explanation trust is
+  mostly model confidence" rather than oversold.
+
 ## 2026-05-22 — Paper 2 P9c: C3 cross-omics SUPPORTED across 3 modalities
 - **Molecules:** within-cell AUROC 0.69 (P9a-v2). **Transcriptomics** (leukemia microarray
   72x7129): AUROC 0.864 (95% CI 0.76-0.94). **Sequence** (transformer on token sequences):

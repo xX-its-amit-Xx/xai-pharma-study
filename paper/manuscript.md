@@ -94,3 +94,15 @@ TDC ADMET datasets (public). All code, the preregistration, the per-cell results
 ## References
 (see `docs/00_literature_review.md` §5; to be converted to BibTeX in P7)
 Hooker 2019 (ROAR); Adebayo 2018 (sanity checks); Lundberg & Lee 2017 (SHAP); Ribeiro 2016 (LIME); Sundararajan 2017 (IG); Sanchez-Lengeling 2020; Alvarez-Melis & Jaakkola 2018; Huang 2021 (TDC); Liu 2023 (M4); OECD QSAR Assessment Framework; EMA reflection paper on AI/ML 2024.
+
+## Figures
+- `results/figures/faith_by_method.png` — faithfulness by attribution method.
+- `results/figures/ood_faith.png` — scaffold vs random faithfulness (H2).
+- `results/figures/sanity_by_modelclass.png` — Adebayo sanity by model class (H4).
+
+## Reviewer-response note
+Anticipated critiques and our responses are tracked in `docs/reviewer_critiques.md`. The GNN
+extension (§3.8), sufficiency and shift analyses (§3.7), and the LIME-budget correction (§3.4)
+were added in response. Two items are honestly scoped to camera-ready: multi-seed across all 12
+endpoints (confirmed for the 4 toxicity endpoints) and the full-matrix LIME@1000 re-run
+(covered by a 6-endpoint robustness subset).

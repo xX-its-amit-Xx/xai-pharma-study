@@ -179,3 +179,8 @@ decision trail (including the two falsified intermediate framings) are in `docs/
 ## References
 Shared with Paper 1 (`paper/references.bib`); adds the Golub et al. (1999) leukemia dataset and
 Simpson (1951).
+
+## Figures
+- `results/figures/p2_ablation_confidence.png` — the key ablation: the certificate is largely model confidence.
+- `results/figures/p2_abstention_utility.png` — faithfulness-vs-coverage under certificate-guided abstention (C2).
+- `results/figures/p2_cross_modality.png` — certifier AUROC across molecules, transcriptomics, sequence (C3).
