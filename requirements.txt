@@ -1,0 +1,19 @@
+# Study dependencies (Python 3.11 target; tested on 3.14 with the PyTDC --no-deps
+# workaround, see docs/deviations.md D1). The metric implementations live in the
+# sibling xai-eval-harness package (install editable: pip install -e ../xai-eval-harness).
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+scikit-learn>=1.4
+matplotlib>=3.8
+torch>=2.2
+captum>=0.7
+shap>=0.44
+lime>=0.2.0.1
+rdkit>=2023.9
+# TDC: install with --no-deps if its numpy<2 pin conflicts with your environment:
+#   pip install --no-deps PyTDC && pip install fuzzywuzzy python-Levenshtein requests
+PyTDC>=0.4
+fuzzywuzzy
+python-Levenshtein
+requests
