@@ -12,17 +12,22 @@ must be built from. Testing on real ADMET/tox models and generalizing to transcr
 sequence tasks, we report three findings. First, the *intuitive* signals fail: neither
 cross-method consensus nor — confirming Paper 1 — distribution distance predicts which
 individual explanations are faithful (within-cell AUROC ≈ 0.53; an apparent pooled signal was
-Simpson's paradox). Second, per-instance faithfulness *is* nonetheless predictable, but from
-the attribution's own **magnitude and concentration** plus the **model's confidence**: a
-seven-feature certifier reaches within-cell AUROC 0.69 on molecules, and certificate-guided
-abstention raises the mean faithfulness of retained explanations by +0.11 at 50% coverage
-(95% CI [+0.06, +0.17]). Third, the certificate **transfers across modalities** — AUROC 0.86
-on a leukemia microarray (transcriptomics) and 0.81 on a sequence-transformer task — but only
-when the underlying model is itself competent (a near-chance model yields an uninformative
-certificate). The practical upshot is a model-agnostic trust layer that turns "feature X drove
-this prediction" into "...and here is whether to believe it for *this* sample," with an
-honest boundary: it certifies self-consistency, not correctness, and presupposes a model that
-has actually learned the task.
+Simpson's paradox). Second, per-instance faithfulness *is* nonetheless predictable (within-cell AUROC 0.69 on
+molecules), and certificate-guided abstention raises the mean faithfulness of retained
+explanations by +0.11 at 50% coverage (95% CI [+0.06, +0.17]). But — and this is the paper's
+most important and sobering result — we trace that predictability **almost entirely to model
+confidence**: an explanation-agnostic confidence-only gate already reaches AUROC 0.68, and the
+attribution-specific signals (magnitude, concentration, consensus, stability) add only +0.01;
+distribution distance adds nothing. Attribution magnitude retains only a weak
+confidence-independent signal (partial correlation 0.22). Third, this predictability
+**transfers across modalities** — AUROC 0.86 on a leukemia microarray (transcriptomics) and
+0.81 on a sequence-transformer task — but only when the underlying model is itself competent
+(a near-chance model yields an uninformative certificate). The practical upshot is deflating
+in a useful way: a **cheap model-confidence gate triages explanation trustworthiness about as
+well as any elaborate explanation-aware certificate**, and practitioners should be wary of
+per-instance "explanation trust scores" that are largely confidence in disguise. What a
+certificate can honestly offer is a confidence-based triage that certifies self-consistency
+(not correctness) and presupposes a model that has learned the task.
 
 ## 1. Introduction
 Post-hoc attributions are read one prediction at a time, yet they are evaluated (Paper 1; the
@@ -67,22 +72,39 @@ bases for a certificate — cross-method agreement, local stability *alone*, and
 distance. We initially concluded per-instance certification was infeasible; §3.2 shows that
 conclusion was premature.
 
-### 3.2 Per-instance faithfulness is predictable — from attribution strength and model confidence
+### 3.2 Per-instance faithfulness is predictable
 A seven-feature learned certifier, evaluated within-cell, reaches **AUROC 0.694** on molecules.
-The carrying signals (within-cell Spearman with faithfulness) are the attribution's **L2
-magnitude (+0.38)** and **entropy (−0.29)**, and the model's **confidence/margin (+0.26)** —
-*not* consensus (+0.15), stability (−0.18), or k-NN density (+0.03). In words: a strong,
-concentrated attribution from a confident prediction tends to be faithful; how much two methods
-agree, and how in-distribution the input is, carry little per-instance information.
+At the univariate level the strongest within-cell correlates of faithfulness are the
+attribution's L2 magnitude (+0.38) and entropy (−0.29) and the model's confidence/margin
+(+0.26); consensus (+0.15), stability (−0.18) and k-NN density (+0.03) are weak.
 
-### 3.3 The certificate is useful for triage (C2)
+### 3.3 ...but the certificate is largely model confidence (the key ablation)
+The univariate correlations are misleading about *what carries the signal*. An ablation
+(within-cell AUROC) is decisive:
+
+| certifier | within-cell AUROC |
+|---|---|
+| confidence-only [conf, margin] | 0.680 |
+| attribution-only [attr_l2, attr_entropy] | 0.536 |
+| full minus attribution-magnitude | 0.699 |
+| **full (7 features)** | **0.694** |
+
+The full certifier beats a confidence-only gate by only **+0.014**, and removing attribution
+magnitude does not hurt at all. Attribution-only is near chance (0.536). Controlling for
+confidence, attribution magnitude retains only a weak partial correlation with faithfulness
+(0.22, down from 0.46). **Per-instance explanation faithfulness is predicted predominantly by
+the model's prediction confidence; the explanation-specific signals add almost nothing**, and
+the intuitive ones (consensus, distribution distance) add nothing. This both answers and
+concedes the obvious reviewer critique — the certificate *is* mostly confidence.
+
+### 3.4 The certificate is useful for triage (C2) — but the lift is confidence-driven
 Ranking explanations by the certificate and abstaining on the lowest scores raises the mean
 faithfulness of the retained set monotonically: at 50% coverage, +0.114 (95% CI [+0.061,
 +0.172]); at 30% coverage, +0.205. Random abstention gives no lift by construction. The
-certificate thus supports a concrete workflow — auto-trust high-certificate explanations, route
-low-certificate ones to a human.
+certificate thus supports a concrete triage workflow — but, given §3.3, this is in effect a
+*confidence-based* triage; an explanation-aware certificate is not needed to obtain most of it.
 
-### 3.4 It transfers across omics — given a competent model (C3)
+### 3.5 It transfers across omics — given a competent model (C3)
 The certifier transfers beyond small molecules: within-modality AUROC **0.86** (95% CI
 [0.76, 0.94]) on the leukemia microarray (transcriptomics, per-gene attribution) and **0.81**
 (95% CI [0.76, 0.85]) on the sequence-transformer task (per-token attribution), with a +0.21
@@ -91,34 +113,62 @@ learned the task (test accuracy 0.57) produced an *uninformative* certificate (A
 including 0.5); only when the model was competent (0.73) did the certificate become predictive.
 The certificate presupposes a model that has learned the task.
 
-## 4. Discussion
-The useful, slightly counter-intuitive message is that **what makes an explanation trustworthy
-for a given prediction is mostly intrinsic to the attribution (its strength and focus) and to
-the model's confidence — not the things practitioners reach for first** (does SHAP agree with
-LIME? is the molecule in-domain?). This both delivers a deployable trust layer and warns
-against two tempting-but-empty heuristics.
+## 4. Related work and positioning
+The **disagreement problem** (Krishna et al., 2022, TMLR) established that post-hoc methods
+disagree and that practitioners resolve this with ad hoc heuristics; a subsequent line
+(*explanation consensus as a training objective*; *aggregating explanations to resolve
+disagreement*) treats agreement as something to maximize. Our contribution is orthogonal and
+partly contrarian: we test whether per-instance **consensus predicts per-instance
+faithfulness**, and find it does **not** (§3.1). Agreement between methods is therefore not, on
+its own, evidence that an explanation is faithful — a caution for the aggregate-to-resolve line.
+
+Our certificate is **selective prediction** (Geifman & El-Yaniv) applied to *explanations*
+rather than predictions: abstain on low-reliability explanations to raise retained-set
+faithfulness. The selective-prediction literature warns that confidence-based gates give a
+false sense of security when confidence is insensitive to evidence quality; our §3.3 ablation
+is the explanation-side analogue of that caution — here the gate is *largely confidence*, and
+explanation-specific signals fail to improve on it.
+
+## 5. Discussion
+The honest, useful message is the opposite of the one we set out to find. We hypothesized that
+per-instance explanation trust would come from explanation-intrinsic signals — cross-method
+agreement, local stability, distribution distance. **All of these fail.** What does predict
+per-instance faithfulness is the model's **prediction confidence**, and the explanation-aware
+features add essentially nothing on top (§3.3). The practical recommendation is therefore
+deflating but actionable: **if you want to triage which explanations to trust, a cheap model
+confidence/margin gate is about as good as it gets** — do not invest in elaborate per-instance
+"explanation reliability scores," which our results suggest are largely confidence relabeled.
+The one nuance is that attribution magnitude carries a small confidence-independent signal
+(partial 0.22), so a confidence+magnitude gate is marginally better than confidence alone.
 
 Relationship to Paper 1: Paper 1 mapped reliability at the (model × method × endpoint) level;
-Paper 2 makes it *per-instance* and actionable, and explains the apparent paradox that OOD
-shift didn't hurt faithfulness (because distribution distance simply isn't what governs
-per-instance faithfulness).
+Paper 2 asked whether it could be made per-instance. The answer is "only via confidence," which
+also explains Paper 1's surprising H2 (distribution distance does not govern per-instance
+faithfulness, so OOD shift did not degrade it).
 
-### 4.1 Limitations (honest)
+### 5.1 Limitations (honest)
+- **The headline is a near-null for the novel part:** the explanation-specific certificate adds
+  only +0.014 AUROC over model confidence. We report this rather than dress it up; the
+  contribution is the *negative/cautionary* result plus the confidence finding, not a new
+  high-performing method.
 - The certificate measures **self-consistency / faithfulness, not correctness** — a faithful
   explanation of a wrong-for-the-right-reasons model is still certified.
-- Within-cell AUROC 0.69 on molecules is **useful but modest**; this is triage, not a guarantee.
-- It **requires a competent model** (§3.4) and held-out **calibration** of the abstention
-  threshold per deployment.
-- Faithfulness is operationalized as comprehensiveness; though ROAR-validated (Paper 1), it is
-  a masking-based measure.
+- Within-cell AUROC 0.69 on molecules is **modest**, and largely confidence; this is triage,
+  not a guarantee.
+- It **requires a competent model** (§3.5) and held-out **calibration** per deployment.
+- Faithfulness is operationalized as comprehensiveness (hard masking); ROAR-validated (Paper 1)
+  but subject to the known AOPC/hard-erasure pitfalls (soft-erasure variants are future work).
 - The transcriptomics test has small n (72; mitigated by cross-fitting + bootstrap CI), and the
   sequence task is synthetic-but-structured.
 
-### 4.2 Conclusion
-Per-prediction explanation trust is estimable, cheaply and across modalities, but from
-attribution strength/concentration and model confidence rather than the intuitive signals.
-Shipped as a trust layer with an abstention policy, it converts an attribution into a
-calibrated, triage-ready recommendation — provided the model underneath has genuinely learned.
+### 5.2 Conclusion
+We set out to build a per-instance "explanation trust score" and instead found that the
+trustworthy ingredient is mostly **model confidence**: cross-method agreement, local stability,
+and distribution distance do not predict which explanations are faithful, and attribution-aware
+features add little beyond confidence. The honest, useful takeaway for industry is to triage
+explanation trust with a cheap confidence/margin gate and to be skeptical of elaborate
+explanation-reliability scores. This is a smaller claim than we hoped for — and a more reliable
+one.
 
 ## 5. Data & code availability
 TDC ADMET (public); Golub leukemia (OpenML); synthetic sequence task (reproducible generator).

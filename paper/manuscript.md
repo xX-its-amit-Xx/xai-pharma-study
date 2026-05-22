@@ -10,6 +10,17 @@ In small-molecule drug discovery, ML models for ADMET (absorption, distribution,
 
 If a method is to satisfy a regulatory requirement, its reliability for that purpose must be measured rather than assumed. Prior evaluation of molecular attribution has been either synthetic (Sanchez-Lengeling et al., 2020, ground-truth-recovery on toy graph tasks), narrow (activity-cliff substructure localization), or general-purpose and faithfulness-centric (M4, 2023). None has measured the *full* reliability battery on *real, decision-relevant* endpoints, across representations and model classes, under the scaffold splits that mirror deployment on novel chemistry. We provide that audit.
 
+### 1.1 Relation to prior work
+The **disagreement problem** (Krishna et al., 2022) showed, on general-domain tabular data and
+through practitioner interviews, that post-hoc methods disagree. Our H3 corroborates this in a
+new setting, but disagreement is only one of five reliability axes we measure; our distinct
+contributions are (i) the *decision-relevant ADMET/toxicity* setting with its regulatory
+framing, (ii) referencing every metric to a *random null* (per the Normalized-AOPC critique),
+(iii) the *out-of-distribution* (scaffold) axis, and (iv) the surprising, robustness-checked
+*falsifications* of faithfulness-pessimism (H1) and OOD-degradation (H2). We thus go beyond
+"explainers disagree" to a quantitative, decision-oriented map of when attributions can be
+trusted at all.
+
 ## 2. Methods
 ### 2.1 Data
 The TDC ADMET benchmark group (Huang et al., 2021). We retained 12 endpoints under a preregistered selection rule (all four toxicity endpoints — DILI, hERG, AMES, LD50 — plus ADME-category coverage with ≥1 regression and ≥1 classification per category where available): Caco2, HIA, BBB, VDss, CYP2C9-substrate, CYP3A4-substrate, Half-Life, Clearance-Hepatocyte, and the four toxicity sets. Endpoints span 475–7,385 molecules. Each was loaded under the canonical scaffold split (primary) and a random split (the out-of-distribution contrast).
