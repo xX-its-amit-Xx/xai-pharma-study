@@ -2,6 +2,19 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — Paper 3 P12 + P13: all three preregistered hypotheses SUPPORTED
+- n = 3,434 (mol, bit) pairs over 1,000 SMILES x 128 top Morgan bits, multi-task GIN.
+- **D1**: occlusion 0.705 [0.697, 0.714] >> 0.6 bar; IG 0.497 [0.485, 0.508] (chance);
+  random 0.492. Occlusion vs IG gap 0.21, CI-separated.
+- **D2**: Spearman 1.000 between Paper-1 null-referenced faithfulness ordering and
+  ground-truth recovery ordering. The harness is right about which method to prefer.
+- **D3**: recovery robust across n_atoms / n_gt / frac_gt (|rho| <= 0.08).
+- Headline methods finding: **gradient IG fails (chance) while occlusion succeeds (0.71) on
+  identical model+molecules+bits** - cleanest ground-truth-validated example of gradient
+  attribution failing on graph models that we are aware of.
+- Manuscript drafted: `paper/manuscript_paper3.md`. Figure:
+  `results/figures/p3_recovery_by_method.png`.
+
 ## 2026-05-22 — Paper 3 P11 feasibility: PASS, with an immediately-interesting finding
 - Multi-task GIN learns to predict 64 top Morgan bits well (mean per-bit test AUROC 0.774).
 - Ground-truth-atom recovery on n=298 (molecule, bit) pairs:
