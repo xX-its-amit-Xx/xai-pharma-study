@@ -29,3 +29,13 @@ Status: planned / running / DONE.
 - **R2:** Paper 1 GNN extension (#2), multi-seed all endpoints (#4), LIME@1000 main agreement (#5),
   sufficiency metric (#6), shift-magnitude (#7).
 - **R3:** integrate, re-draft, final self-review.
+
+## R4 (post-Paper-3) — new critiques + external wet-lab validation
+| # | Critique | Sev | Response / action | Status |
+|---|---|---|---|---|
+| R4-1 | "Paper 3 D2's Spearman=1.0 is on n=3 methods; broaden the method set." | H | **DONE - changed the finding.** With 6 methods (IG / saliency / grad*input / SmoothGrad / occlusion / random) all 4 gradient methods cluster at near-identical mask-faithfulness (0.16-0.18) but only occlusion recovers chemistry. Spearman(faith, recovery) = -0.09 (p=0.87). The harness has a real boundary: it certifies above-null mask-faithfulness but cannot distinguish chemistry-faithful methods from any-reasons-the-model-uses faithful methods. Paper 3 D2 and abstract reframed honestly. | DONE |
+| R4-2 | "No external chemistry validation - everything is self-consistency." | H | **DONE.** PAINS/BRENK alert overlap on tox-trained GIN. AMES Δ=+0.075 [+0.005, +0.148] (significant chemistry consistency); hERG/DILI CIs include 0 (not significant). Reported as honest *partial* validation; explained by PAINS/BRENK being reactive/mutagenic-skewed. Paper 1 §3.8. | DONE |
+| R4-3 | "Does Paper 2's 'mostly confidence' finding generalize beyond molecules?" | M | Cheap test not yet executed; not pursued in R4. **Camera-ready backlog.** | scoped |
+| R4-4 | "Why only GIN? GNN attribution likely architecture-dependent." | M | One architecture sweep (GCN/GAT) on the Paper 3 benchmark would strengthen generality. **Scoped to camera-ready** — Paper 3 result already substantive on GIN with the broader method set. | scoped |
+| R4-5 | "No GNNExplainer / PGExplainer / SubgraphX comparison in Paper 3." | M | Add at least one graph-native attribution method (e.g., GNNExplainer). | scoped (heavy) |
+| R4-6 | "Reproducibility: no Dockerfile / exact env." | L | The requirements.txt + REPRODUCE.md cover it; Dockerfile is camera-ready polish. | scoped |

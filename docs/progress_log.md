@@ -2,6 +2,24 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — R4 iteration: external chemistry validation + Paper 3 reframed
+- **R4-2 PAINS/BRENK external validation (Paper 1 §3.8).** Tox-trained GIN occlusion vs
+  chemistry-curated alerts: AMES Δ=+0.075 [+0.005, +0.148] **significant**; hERG/DILI CIs include 0.
+  Honest partial validation - chemistry consistency where the library captures the mechanism
+  (mutagenicity), at chance where it doesn't (target-/tissue-specific tox). The closest thing to
+  external historical-wet-lab validation available without new bench experiments.
+- **R4-1 Paper 3 D2 with broader method set (CHANGED the finding).** With 6 methods on n=2184
+  (mol, bit) pairs: all 4 gradient methods (IG, saliency, grad*input, SmoothGrad) recover at chance
+  (~0.47-0.49); only occlusion clears chance (0.551). All 4 gradient methods + occlusion sit at
+  near-identical mask-faithfulness (0.16-0.18). Spearman(harness-faithfulness, recovery) = -0.09
+  (p=0.87). The previous n=3 Spearman=1.0 was a small-set artifact. The harness boundary is now
+  precise: certifies above-null but cannot distinguish chemistry-faithful from any-faithful within
+  the gradient family. Paper 3 abstract + §3.2-3.3 reframed.
+- Net effect of R4: Paper 1 gains a real external-chemistry validation row; Paper 3's strongest
+  claim (Spearman=1.0 harness validates against chemistry) is honestly downgraded to "agrees at
+  small n, decorrelates on a broader method set" - with a sharp new finding (gradient methods are
+  jointly mask-faithful but not chemistry-faithful). Reviewer critique register updated.
+
 ## 2026-05-22 — Paper 3 P12 + P13: all three preregistered hypotheses SUPPORTED
 - n = 3,434 (mol, bit) pairs over 1,000 SMILES x 128 top Morgan bits, multi-task GIN.
 - **D1**: occlusion 0.705 [0.697, 0.714] >> 0.6 bar; IG 0.497 [0.485, 0.508] (chance);

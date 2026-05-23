@@ -62,7 +62,31 @@ A one-way variance decomposition (η²) shows no single factor dominates reliabi
 ### 3.7 Robustness checks
 Three preregistered robustness analyses support the main results. **(i) Faithfulness-metric validation:** our primary per-molecule comprehensiveness metric correlates with the expensive remove-and-retrain ROAR protocol at Spearman 0.93 (n=18 cell–method pairs over six endpoints), and ROAR independently confirms that SHAP and LIME beat the random null on *all* six endpoints. Notably, the naive alternative — a global mask-and-repredict model-score AOPC — does *not* track ROAR (ρ=−0.50), which is precisely why we adopted per-molecule comprehensiveness rather than score-AOPC as the primary metric. **(ii) Multi-seed OOD null (H2):** repeating the scaffold-vs-random contrast across three resample/training seeds on the toxicity endpoints leaves the null intact (median Δ=−0.010, sd 0.037, Wilcoxon p=0.19) — the absence of OOD degradation is not a single-sample fluke. **(iii) Mask-reference sensitivity:** the faithfulness ordering (SHAP≈LIME ≫ random) is unchanged across mean, median, and feature-permutation mask references (SHAP 0.33–0.37, LIME 0.30–0.32, random 0.07–0.09). **(iv) Second faithfulness metric:** under *sufficiency* (keep only the top-attributed features), the method ordering is preserved (SHAP > LIME > random), so the faithfulness conclusion is not an artifact of comprehensiveness. **(v) Why H2 holds:** the scaffold split does induce a real shift (test→nearest-train distance averages 1.2×, up to 1.7×, the random-split distance), yet the per-endpoint change in faithfulness does *not* track shift magnitude (Spearman −0.11) — confirming that the absence of OOD degradation is genuine, not a weak-shift artifact.
 
-### 3.8 Learned-representation extension: graph neural networks
+### 3.8 External chemistry-knowledge validation (PAINS/BRENK alert overlap)
+The reliability metrics above are all self-consistency — there is no chemistry ground truth in
+the audit. As an external validation we use **PAINS** (Baell & Holloway 2010, distilled from
+historical wet-lab HTS data on pan-assay interference compounds) and **BRENK** (Brenk et al.
+2008, medicinal-chemistry-curated reactive/toxic groups) substructure libraries: 765 alerts
+total in RDKit's `FilterCatalog`. For each test molecule on a tox-trained GIN, we identify the
+atoms in any matched alert substructure and ask whether occlusion's top-attributed atoms
+overlap with them above a per-molecule random baseline (paired-bootstrap CIs).
+
+| endpoint | n_mols | attribution overlap AUROC | random | Δ (95% CI) |
+|---|---|---|---|---|
+| **AMES** (mutagenicity) | 92 | 0.547 | 0.472 | **+0.075 [+0.005, +0.148]** |
+| hERG | 38 | 0.532 | 0.507 | +0.025 [−0.066, +0.119] |
+| DILI | 42 | 0.503 | 0.509 | −0.006 [−0.098, +0.082] |
+
+**AMES alone is significantly chemistry-consistent** — and that is exactly what a careful read
+of the literature predicts: PAINS/BRENK were curated from screening data dominated by reactive/
+mutagenic chemistry, so their overlap is highest where the underlying mechanism is also
+reactive/mutagenic (AMES). For hERG and DILI, whose mechanisms are target- and tissue-
+specific, general alert libraries are not the right yardstick and the overlap is at chance.
+Reported as a *partial* external validation: where chemistry is captured by the available
+historical-screening-derived libraries, our attributions agree with it; where it is not, the
+absence of overlap is a comment on the library, not necessarily on the attribution.
+
+### 3.9 Learned-representation extension: graph neural networks
 To cover the dominant modern molecular model class, we add a GIN trained on molecular graphs
 (PyG) for the safety-critical classification endpoints, with node-level **occlusion**
 attributions. The GINs are competitive (test AUROC 0.79–0.86). Their attributions beat the

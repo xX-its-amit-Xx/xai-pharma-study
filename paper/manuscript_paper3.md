@@ -18,11 +18,7 @@ recovery on a non-synthetic task; (ii) **Integrated Gradients on the same GIN fa
 (0.497, CI [0.485, 0.508]), statistically indistinguishable from a random baseline (0.492),
 even though the GIN demonstrably *does* attend causally to the bit-defining atoms (occlusion
 finds them) — a precise, ground-truth-validated example of gradient-based attribution failing
-to surface causal model behaviour; (iii) **Paper 1's null-referenced faithfulness metric
-correctly orders the methods** (Spearman = +1.000 between faithfulness ordering and recovery
-ordering across IG/occlusion/random), validating the harness against the chemistry. Recovery
-is essentially independent of molecule size, ground-truth fragment size, and ground-truth
-coverage (|ρ| ≤ 0.08), so the benchmark is robust across molecular complexity. The benchmark
+to surface causal model behaviour; (iii) **The relationship between null-referenced faithfulness and chemical ground truth is method-set dependent and exposes a real boundary on the harness.** With the canonical three methods (IG, occlusion, random) the orderings agree (Spearman = +1.00); but extending to six methods by adding saliency, gradient × input and SmoothGrad, *all four gradient-based methods cluster at near-identical mask-faithfulness (0.16–0.18) yet only occlusion (also 0.18) recovers chemistry-defined atoms above chance*. Harness-faithfulness and recovery decorrelate (Spearman −0.09, p=0.87, n=6 methods). The harness reliably separates faithful from null but cannot distinguish methods that are mask-faithful for the right chemical reasons from those mask-faithful for any reasons the model happens to use. Recovery is essentially independent of molecule size, ground-truth fragment size, and ground-truth coverage (|ρ| ≤ 0.08), so the benchmark is robust across molecular complexity. The benchmark
 ships as a reusable resource and offers a practical byproduct: per-molecule decoding of
 opaque Morgan bits via attribution on the distilled model.
 
@@ -93,14 +89,42 @@ occlusion finds them — but gradients through three GIN layers and a global add
 surface that. This is, to our knowledge, the cleanest ground-truth-validated example of
 gradient-based attribution failure on a graph model.
 
-### 3.2 D2 — Null-referenced faithfulness orders methods correctly
-The per-(mol, bit) atom-level comprehensiveness (the harness's null-referenced faithfulness)
-gives, on average: occlusion 0.275, IG 0.225, random 0.129. Across the three methods,
-**Spearman rank correlation between faithfulness and ground-truth recovery is +1.000**: the
-two rank the methods identically (occlusion > IG > random). The harness is *right* about
-which method to prefer — and it reaches that conclusion without seeing the chemistry.
+### 3.2 D2 — Null-referenced faithfulness orders methods correctly *at small n*
+On the canonical three methods (occlusion / IG / random), the harness's mask-faithfulness
+ordering (0.275 / 0.225 / 0.129) matches the ground-truth-recovery ordering perfectly
+(Spearman = +1.000). Taken alone this is a clean external validation of Paper 1's instrument.
 
-### 3.3 D3 — Recovery is robust across molecular complexity
+### 3.3 D2-extended — but the rank correlation collapses on a broader method set
+A reviewer-anticipated critique is that Spearman = 1.0 on n = 3 methods is fragile. We
+therefore broadened the method set to six (IG, vanilla saliency, gradient × input, SmoothGrad,
+atom occlusion, random null) on the same benchmark (n = 2,184 (mol, bit) pairs after
+re-training at the same seed on a slightly smaller compute-budget split). The picture is
+revealing:
+
+| method | recovery AUROC | mask-faithfulness |
+|---|---|---|
+| atom occlusion | **0.551** [0.537, 0.564] | 0.181 |
+| IG | 0.488 [0.473, 0.503] | 0.164 |
+| gradient × input | 0.476 [0.463, 0.491] | 0.169 |
+| SmoothGrad | 0.475 [0.460, 0.488] | 0.178 |
+| saliency | 0.472 [0.458, 0.486] | 0.177 |
+| random | 0.501 [0.488, 0.513] | 0.085 |
+
+Two findings emerge. **First, the IG failure is not IG-specific** — all four gradient-based
+methods recover chemistry at chance, while only occlusion does so above chance. The
+gradient-vs-perturbation split is the lawful distinction on this GIN. **Second, mask-
+faithfulness is degenerate within the gradient family**: IG, grad × input, SmoothGrad,
+saliency and even occlusion *all* sit at faithfulness 0.16–0.18 — they all pass the
+"masking-their-top-atoms-hurts-the-prediction" test — but only occlusion is also chemistry-
+faithful. The Spearman across these six methods between faithfulness and recovery is
+**−0.086 (p = 0.87)**.
+
+The honest reading is therefore: the harness can certify above-null mask-faithfulness, which
+is necessary, but it cannot, on its own, tell apart methods that are mask-faithful for the
+right reasons (chemistry-aligned) from methods that are mask-faithful for *any* reasons the
+model uses. This is a real boundary on Paper 1's instrument exposed by the ground truth.
+
+### 3.4 D3 — Recovery is robust across molecular complexity
 Spearman of occlusion AUROC with molecule size (n_atoms), ground-truth fragment size (n_gt)
 and ground-truth fraction (frac_gt) is −0.01, −0.08 and −0.06 respectively — all near zero.
 The benchmark is not an artifact of small molecules or large ground-truth sets.
