@@ -170,15 +170,16 @@ explanation trust with a cheap confidence/margin gate and to be skeptical of ela
 explanation-reliability scores. This is a smaller claim than we hoped for — and a more reliable
 one.
 
-## 5. Data & code availability
+## 6. Data & code availability
 TDC ADMET (public); Golub leukemia (OpenML); synthetic sequence task (reproducible generator).
 All drivers (`src/p9a_*`, `p9b_utility.py`, `p9c_*`), per-instance feature databases, and
 verdict tables are committed; metrics use the `xai-eval-harness`. Preregistration and the full
 decision trail (including the two falsified intermediate framings) are in `docs/`.
 
-## References
-Shared with Paper 1 (`paper/references.bib`); adds the Golub et al. (1999) leukemia dataset and
-Simpson (1951).
+## 7. References
+BibTeX in [`paper/references.bib`](references.bib), shared with Paper 1. Key works specific to
+this paper: Geifman & El-Yaniv 2017 (selective prediction); Krishna et al. 2022 (Disagreement
+Problem); Golub et al. 1999 (leukemia microarray); Simpson 1951 (paradox-of-aggregation).
 
 ## Figures
 - `results/figures/p2_ablation_confidence.png` — the key ablation: the certificate is largely model confidence.

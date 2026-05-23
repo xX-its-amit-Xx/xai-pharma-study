@@ -30,6 +30,27 @@ Status: planned / running / DONE.
   sufficiency metric (#6), shift-magnitude (#7).
 - **R3:** integrate, re-draft, final self-review.
 
+## R5 (fresh cold-eyed manuscript sweep) — 2026-05-23
+A clean re-read after R4 surfaced 11 issues. Three were **substantive internal contradictions**
+(claims in one section contradicting another), eight were presentational. All addressed.
+
+| # | Critique | Sev | Resolution |
+|---|---|---|---|
+| R5-1 | **Paper 3 §4 Discussion (ii) & §4.2 Conclusion still assert "harness ordering aligns perfectly with chemistry"** — directly contradicts the R4 §3.3 finding (Spearman -0.09 on 6 methods). | **H** | Discussion + Conclusion rewritten to match §3.3. |
+| R5-2 | **Paper 1 §4 says explainers "disagree almost completely (H3)"** — contradicts §3.4's budget-corrected "agree only modestly" (mean rho 0.34). | **H** | Wording corrected to match §3.4. |
+| R5-3 | **Paper 2 has two "## 5." sections** (Discussion at §5; Data availability also numbered §5). | **H** | Renumbered Data & code availability to §6, References to §7. |
+| R5-4 | Paper 3 §2 Methods: "frequency range 23–733/**700**" — should be /1000 (total molecules; the actual log shows "/1000"). | M | Fixed. |
+| R5-5 | Paper 1 §3.7 says "**Three** preregistered robustness analyses" then lists **five** items (i–v). | L | Count corrected to five. |
+| R5-6 | Paper 1 reviewer-response note: GNN extension cited as **§3.8**, but it is **§3.9** (alert overlap is §3.8). | L | Fixed. |
+| R5-7 | Paper 3 §4.1 Limitations lists "saliency" as a method we did not include — but R4-1 added it. | L | "Saliency" removed from missing list; GNNExplainer remains as future work. |
+| R5-8 | Paper 1 §3.4: "no endpoint exceeding 0.50" — DILI is exactly 0.500. | L | Tightened to "not reaching above 0.50 on any endpoint". |
+| R5-9 | Paper 1 References section stale (says "to be converted to BibTeX in P7" but `paper/references.bib` exists). | L | Pointer added to `references.bib`. |
+| R5-10 | Paper 2 missing References section consistent with Paper 1's style. | L | Added. |
+| R5-11 | Paper 3 §3.3 doesn't make explicit that the 6-method run uses a different setup (K=96 bits, N=700 mols) than the §2/§3.1-3.2 main matrix (K=128, N=1000). | M | Added clarifying parenthetical and a note. |
+
+**R5 substantive addition:** new figure `p3_d2_extended.png` (scatter of recovery vs faithfulness
+across the 6 methods) so the §3.3 finding has a visual.
+
 ## R4 (post-Paper-3) — new critiques + external wet-lab validation
 | # | Critique | Sev | Response / action | Status |
 |---|---|---|---|---|

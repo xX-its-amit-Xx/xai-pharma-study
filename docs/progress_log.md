@@ -2,6 +2,29 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-23 — R5 cold-eyed sweep: 12 issues caught and fixed
+A fresh re-read of all three manuscripts against the actual results CSVs surfaced 12 problems,
+**including three critical internal contradictions** where one section's claim was inconsistent
+with another's. All fixed:
+- **Paper 3 §4 Discussion + Conclusion** still asserted "harness ordering aligns perfectly with
+  chemistry" — directly contradicting the R4 §3.3 finding (Spearman -0.09 on 6 methods).
+  Discussion rewritten to match §3.3; conclusion likewise.
+- **Paper 1 §4 Discussion** said explainers "disagree almost completely" — contradicting the
+  budget-corrected §3.4 ("agree only modestly", mean rho 0.34). Wording corrected.
+- **Paper 2** had two `## 5.` sections (Discussion and Data availability). Renumbered.
+Eight presentational/numerical fixes: Paper 3 §2 "/700" → "/1000" (freq normalization error);
+Paper 1 §3.7 "Three" → "Five" (count); Paper 1 reviewer-response cited §3.8 for GNN but it is
+§3.9; Paper 1 §2.5 bootstrap-resamples notation clarified; abstract phrasing tightened on the
+0.50 boundary (DILI is exactly 0.500); Paper 1 References freshened (bib exists); Paper 2
+References added; Paper 3 limitations corrected to remove "saliency" (added in R4-1) and to
+clarify §3.3 used a different K/N setup. Plus a 12th caught during the sweep: 4 missing bib
+entries (PAINS, BRENK, ECFP, activity cliffs) — added.
+**Substantive addition:** new figure `p3_d2_extended.png` — scatter of mask-faithfulness vs
+chemistry recovery across the 6 methods, making the harness-boundary finding visible.
+All numbers cross-checked against `results/`: H1 12% (FDR) / IG 0/48 / LIME 15% (21/142) / SHAP
+12% (11/94); H4 MLP 25% (24/96) / tree 39% (74/188); H3 LIME-1000 max 0.500 (DILI). Cross-refs
+intact across all three manuscripts.
+
 ## 2026-05-22 — R4 iteration: external chemistry validation + Paper 3 reframed
 - **R4-2 PAINS/BRENK external validation (Paper 1 §3.8).** Tox-trained GIN occlusion vs
   chemistry-curated alerts: AMES Δ=+0.075 [+0.005, +0.148] **significant**; hERG/DILI CIs include 0.

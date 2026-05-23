@@ -48,8 +48,8 @@ faithfulness across modalities but no ground truth. The Disagreement Problem (Kr
 BBB, Caco2). Scaffold-style split (70/30 by SMILES order following the upstream scaffold
 order of each parent endpoint). Featurization via PyG `from_smiles` (9-D node features).
 
-**Target.** Top K=128 Morgan bits by training-set firing frequency (range 23–733/700);
-multi-task sigmoid output.
+**Target.** Top K=128 Morgan bits by firing frequency across the pooled set (range
+23–733/1,000); multi-task sigmoid output.
 
 **Model.** 3-layer GIN with hidden 64, ReLU, `global_add_pool`, linear 64→128 head.
 Trained 80 epochs with Adam(1e-3) under BCE.
@@ -97,9 +97,10 @@ ordering (0.275 / 0.225 / 0.129) matches the ground-truth-recovery ordering perf
 ### 3.3 D2-extended — but the rank correlation collapses on a broader method set
 A reviewer-anticipated critique is that Spearman = 1.0 on n = 3 methods is fragile. We
 therefore broadened the method set to six (IG, vanilla saliency, gradient × input, SmoothGrad,
-atom occlusion, random null) on the same benchmark (n = 2,184 (mol, bit) pairs after
-re-training at the same seed on a slightly smaller compute-budget split). The picture is
-revealing:
+atom occlusion, random null). To keep gradient computation tractable across four gradient
+variants we re-trained the GIN at the same seed on a slightly smaller setup — 700 molecules and
+K = 96 top Morgan bits (vs 1,000 and K = 128 for the main D1/D2 run) — giving n = 2,184 (mol,
+bit) pairs after held-out splitting. The picture is revealing:
 
 | method | recovery AUROC | mask-faithfulness |
 |---|---|---|
@@ -132,22 +133,32 @@ The benchmark is not an artifact of small molecules or large ground-truth sets.
 ## 4. Discussion
 Three points are worth stating plainly.
 
-**(i) Methods that look similarly faithful can differ dramatically against chemistry.** IG
-beats the null on the harness's faithfulness metric (0.225 vs 0.129), but it does *not*
-recover ground-truth atoms. Occlusion does both. Beating a null is necessary but not
-sufficient for chemical fidelity, and a benchmark with ground truth is needed to draw that
-line.
+**(i) Gradient-based attribution fails as a *family* on this GIN — not just IG.** All four
+gradient methods we tested (IG, vanilla saliency, gradient × input, SmoothGrad) recover
+chemistry-defined atoms at chance, while atom occlusion recovers them substantially above
+chance (§3.3). The lawful axis on this benchmark is gradient vs perturbation, not
+method-by-method idiosyncrasy. This is consistent with the broader literature that gradients
+through several message-passing layers and a permutation-invariant pool diffuse across nodes;
+the methodological lesson is concrete: for atom-level attribution of graph-level GNN outputs,
+prefer perturbation-based methods, or use methods that explicitly target the pooled head
+(e.g. LayerIntegratedGradients on the post-pool embedding).
 
-**(ii) The harness's ordering aligns with chemistry.** D2's Spearman = 1.0 is a clean,
-external validation of Paper 1's null-referenced faithfulness instrument: when a
-chemistry-defined ground truth exists, the harness agrees with it.
+**(ii) Null-referenced faithfulness has a precise, ground-truth-exposed boundary.** Taken on
+the canonical three methods (IG / occlusion / random), Paper 1's mask-faithfulness ordering
+agrees with the chemistry ordering perfectly (Spearman = 1.0); but as soon as the method set
+is broadened, the agreement collapses (Spearman = −0.09 over six methods, §3.3). The reason
+is mechanically clear: all four gradient methods and occlusion sit at mask-faithfulness 0.16–
+0.18 — they all pass the "masking-their-top-atoms-hurts-the-prediction" test — yet only
+occlusion is also chemistry-faithful. The instrument certifies *above-null* mask-faithfulness,
+which is necessary, but it does not, on its own, distinguish methods that are mask-faithful
+for the right chemical reasons from methods mask-faithful for any reasons the model happens to
+use. This is the real boundary of self-consistency-based faithfulness, exposed here against
+external ground truth — and an honest *limit* on the harness, not a refutation of it.
 
-**(iii) IG on graphs is a known-cautioned setting.** Our finding is consistent with the broader
-literature that gradient-based attribution on permutation-invariant pooled outputs can wash
-out (gradients into pooled representations distribute back across many nodes). The
-methodological lesson is concrete: for atom-level attribution of graph-level GNN outputs,
-prefer perturbation-based methods (occlusion) over gradient-based ones, or use methods that
-explicitly target the pooled head (e.g. LayerIntegratedGradients on the post-pool embedding).
+**(iii) Methods that look similarly faithful can differ dramatically against chemistry.** The
+practical corollary of (ii): a model+method that beats the null on faithfulness is necessary
+but not sufficient evidence that the explanation is chemically right. A ground-truth benchmark
+is needed to draw that line, and fingerprint distillation provides one.
 
 ### 4.1 Limitations (honest)
 - ECFP is a known, deterministic function; the *prediction* task is by design uninteresting.
@@ -157,18 +168,24 @@ explicitly target the pooled head (e.g. LayerIntegratedGradients on the post-poo
 - Recovery is a *necessary* not a sufficient condition for attribution validity in downstream
   tasks; methods that pass here may still mislead on property-prediction GNNs where the model
   must learn chemistry from sparse labels rather than mimic a known hash.
-- We tested one GNN architecture (GIN, 3 layers, add pool); the IG failure may be
-  architecture-specific. We did not exhaustively sweep architectures or include GNNExplainer
-  / saliency, which is the natural next step.
+- We tested one GNN architecture (GIN, 3 layers, add pool); the gradient-vs-perturbation
+  finding may be architecture-specific. We tested four gradient variants (IG, vanilla saliency,
+  gradient × input, SmoothGrad) but did not include graph-native explainers such as
+  GNNExplainer, PGExplainer or SubgraphX, nor sweep GCN/GAT/attention-pool variants — the
+  natural next steps.
 
 ### 4.2 Conclusion
 Fingerprint distillation gives the field a non-synthetic, abundant, per-instance ground-truth
 attribution benchmark for molecular GNNs. On this benchmark, atom occlusion recovers
-chemistry-defined atoms at AUROC 0.71, while Integrated Gradients on the same model fails to
-the chance level — a sharp, well-powered methods finding. As a bonus, the benchmark
-externally validates the null-referenced faithfulness instrument of Paper 1: its ordering of
-methods agrees perfectly with the ground-truth ordering. The benchmark and code ship with
-this paper.
+chemistry-defined atoms at AUROC 0.71; all four gradient-based methods we tested (IG, vanilla
+saliency, gradient × input, SmoothGrad) fail to the chance level on the same model — a sharp,
+well-powered methods finding about gradient attribution on graph-level outputs. The benchmark
+also bounds Paper 1's null-referenced faithfulness instrument honestly: it certifies
+above-null mask-faithfulness, which is necessary; but within the family of mask-faithful
+methods it cannot, on its own, separate chemistry-faithful from any-reasons-the-model-uses
+faithful. Both findings — the gradient-family failure and the harness boundary — are useful
+in proportion to the ground truth that exposed them. The benchmark and code ship with this
+paper.
 
 ## 5. Data and code availability
 TDC ADMET (public); the distillation pipeline, the trained GIN, and the per-(mol, bit)
@@ -181,3 +198,5 @@ Sanchez-Lengeling et al. (2020), Krishna et al. (2022, disagreement), Liu et al.
 ## Figures
 - `results/figures/p3_recovery_by_method.png` — D1 ground-truth recovery AUROC by method
   with 95% CIs.
+- `results/figures/p3_d2_extended.png` — D2-extended: per-method scatter of mask-faithfulness
+  vs chemistry recovery on 6 methods, visualising the harness-boundary finding (§3.3).
