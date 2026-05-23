@@ -2,6 +2,20 @@
 
 Reverse-chronological. Each scheduled chunk appends an entry.
 
+## 2026-05-22 — Paper 3 P11 feasibility: PASS, with an immediately-interesting finding
+- Multi-task GIN learns to predict 64 top Morgan bits well (mean per-bit test AUROC 0.774).
+- Ground-truth-atom recovery on n=298 (molecule, bit) pairs:
+  - **IG = 0.494** (chance) - despite the GIN learning the bits
+  - **Atom occlusion = 0.713** (clears 0.6 bar)
+  - random baseline = 0.490
+- Interpretation: the GIN *is* causally attending to the bit-defining atoms (occlusion finds them);
+  IG fails to surface that on a 3-layer GIN + global_add_pool (gradients smear/cancel). This
+  validates the benchmark - it distinguishes attribution methods using ground truth - and is
+  itself a publishable methods finding.
+- Files: `src/p11_feasibility.py`, `results/p11_feasibility.csv`.
+- **Next:** P12 scale up (1000 mols, K=128 bits, IG + occlusion + random) + D2 cross-check
+  with null-referenced faithfulness.
+
 ## 2026-05-22 — Review-response iteration (R1-R3) COMPLETE
 - **R1:** positioned both papers vs the Disagreement Problem (Krishna 2022) + selective
   prediction; ran the Paper-2 ablation that **confirmed critique A** — the certificate is
