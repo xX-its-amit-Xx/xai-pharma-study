@@ -196,7 +196,19 @@ Shared with Paper 1 (`paper/references.bib`); adds Rogers & Hahn (2010, Morgan f
 Sanchez-Lengeling et al. (2020), Krishna et al. (2022, disagreement), Liu et al. (2023, M4).
 
 ## Figures
-- `results/figures/p3_recovery_by_method.png` — D1 ground-truth recovery AUROC by method
-  with 95% CIs.
-- `results/figures/p3_d2_extended.png` — D2-extended: per-method scatter of mask-faithfulness
-  vs chemistry recovery on 6 methods, visualising the harness-boundary finding (§3.3).
+
+**Figure 1.** Ground-truth atom recovery by attribution method (D1, §3.1). Mean AUROC over
+n = 3,434 (molecule, bit) pairs; error bars are 95% bootstrap CIs. Atom occlusion clears the
+preregistered 0.6 bar (dashed red line). Integrated Gradients is at chance (dotted grey line),
+statistically indistinguishable from a random baseline.
+
+![Figure 1](../results/figures/pub/p3_fig1_d1_recovery.png)
+
+**Figure 2.** The harness boundary (D2-extended, §3.3). Per-method scatter of null-referenced
+mask-faithfulness (x) vs chemistry-defined recovery AUROC (y) across six attribution methods
+on the same GIN. All four gradient methods plus occlusion sit at near-identical
+mask-faithfulness (0.16–0.18), yet only occlusion clears chance recovery. Mask-faithfulness
+*and* recovery decorrelate over this broader method set (Spearman = −0.09, p = 0.87) — a
+precise, ground-truth-exposed boundary on self-consistency-based faithfulness.
+
+![Figure 2](../results/figures/pub/p3_fig2_d2_extended.png)

@@ -51,7 +51,7 @@ Only **12%** of non-random method–cells fail to be significantly more faithful
 Contrary to our hypothesis, attribution faithfulness and stability do **not** significantly degrade under scaffold shift (faithfulness median scaffold−random Δ = −0.013, Wilcoxon p = 0.13; stability p = 0.85), even though model *accuracy* does. Whatever an attribution is faithful to, it remains roughly as faithful on novel chemotypes as on familiar ones (Fig. `ood_faith.png`).
 
 ### 3.4 H3 (supported, with an important budget correction): explainers agree only modestly
-At the main-run LIME budget (300 samples) median pairwise rank agreement was near zero (Spearman 0.05). A preregistered robustness check (R2) revealed this was partly an artifact of LIME's sampling budget: re-running SHAP-vs-LIME at 1,000 samples on six endpoints (descriptors, scaffold, RF) **roughly doubled** agreement, from a mean ρ of 0.15 to **0.34** (DILI 0.50, hERG 0.43, AMES 0.37, BBB 0.36, LD50 0.19, Caco2 0.18). We therefore report the budget-corrected figure as primary: even at an adequate budget and on the interpretable descriptor representation, SHAP and LIME agree only modestly (mean ρ 0.34, **no endpoint exceeding 0.50**), and disagreement is worse on high-dimensional ECFP and for SHAP-vs-IG (neither of which involves LIME's budget). Toxicity endpoints are *not* more self-consistent than the rest (Mann–Whitney p = 0.24). The qualitative conclusion stands — switching attribution method changes a substantial fraction of the "important features" reported — but the effect is moderate, not near-total, and naive low-budget LIME materially overstates it.
+At the main-run LIME budget (300 samples) median pairwise rank agreement was near zero (Spearman 0.05). A preregistered robustness check (R2) revealed this was partly an artifact of LIME's sampling budget: re-running SHAP-vs-LIME at 1,000 samples on six endpoints (descriptors, scaffold, RF) **roughly doubled** agreement, from a mean ρ of 0.15 to **0.34** (DILI 0.50, hERG 0.42, AMES 0.37, BBB 0.36, LD50 0.19, Caco2 0.18). We therefore report the budget-corrected figure as primary: even at an adequate budget and on the interpretable descriptor representation, SHAP and LIME agree only modestly (mean ρ 0.34, **no endpoint exceeding 0.50**), and disagreement is worse on high-dimensional ECFP and for SHAP-vs-IG (neither of which involves LIME's budget). Toxicity endpoints are *not* more self-consistent than the rest (Mann–Whitney p = 0.24). The qualitative conclusion stands — switching attribution method changes a substantial fraction of the "important features" reported — but the effect is moderate, not near-total, and naive low-budget LIME materially overstates it.
 
 ### 3.5 H4 (supported): a quarter of MLP settings fail the sanity check
 Under the *true* Adebayo weight-reinitialization test, **25%** of MLP attribution cells fail (attributions on a randomized model resemble those on the trained model). The tree-model rate is higher (39%) but relies on the label-permutation analogue and is reported with that caveat (Fig. `sanity_by_modelclass.png`).
@@ -124,9 +124,39 @@ Problem); Geifman & El-Yaniv 2017 (selective prediction); Baell & Holloway 2010 
 Brenk et al. 2008; OECD QSAR Assessment Framework; EMA reflection paper on AI/ML 2024.
 
 ## Figures
-- `results/figures/faith_by_method.png` — faithfulness by attribution method.
-- `results/figures/ood_faith.png` — scaffold vs random faithfulness (H2).
-- `results/figures/sanity_by_modelclass.png` — Adebayo sanity by model class (H4).
+
+**Figure 1.** Per-molecule faithfulness by attribution method across the full cell matrix.
+Boxplots over all (endpoint × representation × split × model) cells for which the method
+applies. Random null shown in grey.
+
+![Figure 1](../results/figures/pub/p1_fig1_faith_by_method.png)
+
+**Figure 2.** Scaffold vs random faithfulness (H2). Each point is one (endpoint × representation
+× model × method) cell; the dashed line is y = x. No systematic vertical displacement —
+faithfulness does not degrade under scaffold-split OOD shift.
+
+![Figure 2](../results/figures/pub/p1_fig2_ood.png)
+
+**Figure 3.** Adebayo model-randomization sanity by model class (H4). Y-axis is |rank
+correlation| between attributions on the trained vs randomized model; dashed line marks the
+preregistered failure threshold (0.5). The MLP rate (canonical Adebayo weight reinit) is 25%,
+the tree rate (label-permutation analogue, caveated) 39%.
+
+![Figure 3](../results/figures/pub/p1_fig3_sanity.png)
+
+**Figure 4.** External chemistry-knowledge validation (§3.8). Δ AUROC between attribution
+top-atoms and PAINS/BRENK-curated alert atoms vs a random-atom baseline, on tox-trained GINs.
+Error bars: 95% paired-bootstrap CIs over molecules. AMES is significantly chemistry-consistent
+(asterisk = CI excludes 0); hERG and DILI are at chance — consistent with the
+reactivity/mutagenicity skew of the alert libraries.
+
+![Figure 4](../results/figures/pub/p1_fig4_external_alerts.png)
+
+**Figure 5.** GNN learned-representation extension (§3.9). Left: GIN occlusion faithfulness vs
+the random null on the four classification tox endpoints. Right: Adebayo sanity similarity
+under *true* weight reinitialization; all four endpoints PASS (similarity < 0.5).
+
+![Figure 5](../results/figures/pub/p1_fig5_gnn_extension.png)
 
 ## Reviewer-response note
 Anticipated critiques and our responses are tracked in `docs/reviewer_critiques.md`. The GNN

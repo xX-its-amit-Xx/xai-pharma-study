@@ -182,6 +182,23 @@ this paper: Geifman & El-Yaniv 2017 (selective prediction); Krishna et al. 2022 
 Problem); Golub et al. 1999 (leukemia microarray); Simpson 1951 (paradox-of-aggregation).
 
 ## Figures
-- `results/figures/p2_ablation_confidence.png` — the key ablation: the certificate is largely model confidence.
-- `results/figures/p2_abstention_utility.png` — faithfulness-vs-coverage under certificate-guided abstention (C2).
-- `results/figures/p2_cross_modality.png` — certifier AUROC across molecules, transcriptomics, sequence (C3).
+
+**Figure 1.** The key ablation (§3.3): within-cell AUROC for predicting per-instance
+faithfulness, under four feature sets. Confidence alone reaches 0.680; adding the five
+explanation-specific features brings the full model to only 0.694 (+0.014). Dropping
+attribution magnitude does not hurt at all. Dashed line is chance (0.5).
+
+![Figure 1](../results/figures/pub/p2_fig1_ablation.png)
+
+**Figure 2.** Abstention utility (C2). Mean faithfulness of the retained set as a function of
+coverage (fraction retained), within-cell. Certificate-guided abstention rises monotonically;
+random abstention is flat at the full-set mean. Lift at 50% coverage = +0.114 (95% CI [+0.061,
++0.172]).
+
+![Figure 2](../results/figures/pub/p2_fig2_abstention.png)
+
+**Figure 3.** Cross-modality transfer (C3). Certifier AUROC on molecules (P9a-v2 within-cell
+mean), transcriptomics (Golub leukemia microarray), and the sequence-transformer task. Bars
+show 95% CIs where applicable; dashed line is the preregistered 0.55 bar.
+
+![Figure 3](../results/figures/pub/p2_fig3_cross_modality.png)
